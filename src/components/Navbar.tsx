@@ -1,0 +1,95 @@
+import React from 'react';
+import { Sparkles, MessageCircle, Code2 } from 'lucide-react';
+import { getWhatsAppLink } from '../data/workshopData';
+import { InnovettLogo } from './InnovettLogo';
+
+interface NavbarProps {
+  onOpenCodeModal: () => void;
+  selectedCity?: string;
+}
+
+export const Navbar: React.FC<NavbarProps> = ({ onOpenCodeModal, selectedCity }) => {
+  return (
+    <>
+      {/* Top Urgency Strip */}
+      <div className="bg-slate-900 text-white text-xs py-2 px-4 border-b border-slate-800 sticky top-0 z-50">
+        <div className="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2 text-center sm:text-left">
+          <div className="flex items-center gap-2">
+            <span className="inline-flex items-center px-2 py-0.5 rounded text-[10px] font-bold bg-amber-400 text-slate-950 uppercase tracking-wide">
+              ⚡ Preventa Activa
+            </span>
+            <span className="text-slate-200">
+              Asegura tu cupo con tarifa especial de <strong className="text-emerald-400 font-bold">$160</strong> antes del <strong>30 de Octubre</strong> (Ahorras $30).
+            </span>
+          </div>
+
+          <div className="flex items-center gap-3">
+            <button
+              onClick={onOpenCodeModal}
+              className="inline-flex items-center gap-1 text-slate-300 hover:text-white text-xs font-semibold px-2 py-1 rounded bg-slate-800 hover:bg-slate-700 transition-colors border border-slate-700"
+              title="Ver y copiar el código HTML independiente"
+            >
+              <Code2 className="w-3.5 h-3.5 text-emerald-400" />
+              <span>Ver Código HTML</span>
+            </button>
+
+            <a
+              href={getWhatsAppLink(selectedCity)}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-emerald-400 hover:text-emerald-300 font-bold underline underline-offset-4 whitespace-nowrap transition-colors"
+            >
+              Asegurar cupo en WhatsApp →
+            </a>
+          </div>
+        </div>
+      </div>
+
+      {/* Main Navigation Header */}
+      <header className="bg-white/95 backdrop-blur-md border-b border-slate-200 sticky top-9 z-40">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 h-20 flex items-center justify-between">
+          {/* Logo Brand */}
+          <a href="#" className="flex items-center gap-3 group" title="Innovett Animal Care">
+            <div className="flex flex-col">
+              <InnovettLogo className="h-10 sm:h-11 group-hover:scale-105 transition-transform origin-left" />
+              <span className="text-[9px] text-slate-500 font-medium tracking-wider uppercase mt-0.5">
+                En alianza con Mindray Animal Medical
+              </span>
+            </div>
+          </a>
+
+          {/* Nav Links */}
+          <nav className="hidden md:flex items-center gap-6 text-sm font-semibold text-slate-600">
+            <a href="#beneficios" className="hover:text-emerald-800 transition-colors">Beneficios</a>
+            <a href="#ciudades" className="hover:text-emerald-800 transition-colors">Sedes y Fechas</a>
+            <a href="#programa" className="hover:text-emerald-800 transition-colors">Temario</a>
+            <a href="#ponentes" className="hover:text-emerald-800 transition-colors">Ponentes</a>
+            <a href="#inversion" className="hover:text-emerald-800 transition-colors">Inversión</a>
+          </nav>
+
+          {/* Header Actions */}
+          <div className="flex items-center gap-3">
+            <button
+              onClick={onOpenCodeModal}
+              className="hidden lg:inline-flex items-center gap-1.5 px-3 py-2 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold text-xs transition-all border border-slate-200"
+            >
+              <Code2 className="w-4 h-4 text-emerald-700" />
+              <span>Copiar HTML</span>
+            </button>
+
+            <a
+              href={getWhatsAppLink(selectedCity)}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-emerald-800 hover:bg-emerald-700 text-white font-bold text-sm shadow-md shadow-emerald-800/20 transition-all hover:scale-[1.02] active:scale-[0.98]"
+            >
+              <MessageCircle className="w-4 h-4" />
+              <span className="hidden sm:inline">Inscribirme vía WhatsApp</span>
+              <span className="sm:hidden">WhatsApp</span>
+            </a>
+          </div>
+        </div>
+      </header>
+    </>
+  );
+};
