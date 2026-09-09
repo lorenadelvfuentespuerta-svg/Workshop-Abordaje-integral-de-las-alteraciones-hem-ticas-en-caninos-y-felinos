@@ -61,7 +61,7 @@ export const WORKSHOP_INFO = {
       date: "16 de Noviembre",
       day: "Lunes",
       status: "Cupos Disponibles",
-      locationHint: "Sede confirmada al formalizar inscripción",
+      locationHint: "Salón de conferencias corporativo con facilidades de estacionamiento",
     },
     {
       id: "maracay",
@@ -69,7 +69,7 @@ export const WORKSHOP_INFO = {
       date: "18 de Noviembre",
       day: "Miércoles",
       status: "Cupos Disponibles",
-      locationHint: "Sede confirmada al formalizar inscripción",
+      locationHint: "Salón principal de conferencias con facilidades de estacionamiento",
     },
     {
       id: "lecherias",
@@ -77,7 +77,7 @@ export const WORKSHOP_INFO = {
       date: "20 de Noviembre",
       day: "Viernes",
       status: "Cupos Limitados",
-      locationHint: "Sede confirmada al formalizar inscripción",
+      locationHint: "Salón ejecutivo de entrenamiento con facilidades de estacionamiento",
     },
   ] as CityEvent[],
   targetAudience: [
@@ -200,7 +200,7 @@ export const WORKSHOP_INFO = {
       flag: "🇲🇽",
       title: "Especialista en Hematología y Hemato-oncología Veterinaria",
       role: "Biólogo, MVZ EEHDL Dipl.",
-      avatar: "https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&w=600&q=80",
+      avatar: "https://i.postimg.cc/DfBbt2PR/pablo-png-para-web.png",
       bio: [
         "Formado en el Instituto de Hematopatología y en la Universidad de Guadalajara (UDG).",
         "Cuenta con una sólida trayectoria médica enriquecida por estancias internacionales de especialización en Croacia, Costa Rica y España.",
@@ -221,7 +221,7 @@ export const WORKSHOP_INFO = {
       flag: "🇨🇴",
       title: "Especialista en Laboratorio Clínico Veterinario y Microbiología",
       role: "Bacterióloga, Magíster en Microbiología",
-      avatar: "https://images.unsplash.com/photo-1594824813575-35639b97b098?auto=format&fit=crop&w=600&q=80",
+      avatar: "https://i.postimg.cc/1tYsrYDK/TATIANA.png",
       bio: [
         "Formada como Bacterióloga y Laboratorista Clínica con énfasis en Diagnóstico Clínico Veterinario.",
         "Cuenta con Maestría en Microbiología y Diplomado en Laboratorio Clínico de Pequeñas Especies, lo que le otorga un profundo dominio analítico.",

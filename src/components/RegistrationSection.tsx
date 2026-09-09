@@ -75,7 +75,7 @@ export const RegistrationSection: React.FC<RegistrationSectionProps> = ({
     };
 
     fetch(
-      'https://script.google.com/macros/s/AKfycbxTCxU-lLxkZTk7tqNrsyEUFSCwIkwyoVpNJ6bEfbMATgD9Xa0JEKTqZyEtit6FQlWn/exec',
+      'https://script.google.com/macros/s/AKfycbxDfBIS-oFT-gbjOiJVQ-fyOZDF94DABr2hHSEXX5NbAZTq6tp-zbBh0qe93VXfsXlN/exec',
       {
         method: 'POST',
         mode: 'no-cors',
@@ -152,9 +152,9 @@ export const RegistrationSection: React.FC<RegistrationSectionProps> = ({
                   onChange={handleChange}
                   className="w-full px-4 py-3.5 rounded-xl border border-slate-300 focus:border-emerald-700 focus:ring-2 focus:ring-emerald-700/20 bg-slate-50 text-slate-900 text-sm font-semibold transition-all outline-none"
                 >
-                  <option value="Caracas">Caracas - Jueves 21 de Noviembre (Sede por confirmar)</option>
-                  <option value="Maracay">Maracay - Sábado 23 de Noviembre (Sede por confirmar)</option>
-                  <option value="Lecherías">Lecherías - Lunes 25 de Noviembre (Sede por confirmar)</option>
+                  <option value="Caracas">Caracas - Lunes 16 de Noviembre</option>
+                  <option value="Maracay">Maracay - Miércoles 18 de Noviembre</option>
+                  <option value="Lecherías">Lecherías - Viernes 20 de Noviembre</option>
                 </select>
               </div>
 

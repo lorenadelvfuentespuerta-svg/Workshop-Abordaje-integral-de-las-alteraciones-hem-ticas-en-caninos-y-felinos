@@ -19,31 +19,38 @@ export const SpeakersSection: React.FC = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
           {WORKSHOP_INFO.speakers.map((speaker, index) => (
             <div
               key={index}
-              className="bg-slate-50 rounded-2xl border border-slate-200 p-7 flex flex-col justify-between shadow-sm hover:border-emerald-700 transition-all"
+              className="bg-slate-50 rounded-2xl border border-slate-200 p-6 sm:p-7 flex flex-col justify-between shadow-sm hover:border-emerald-700/60 hover:shadow-md transition-all"
             >
               <div>
-                <div className="flex items-start justify-between gap-3 mb-4">
-                  <div>
-                    <div className="flex items-center gap-2 mb-1">
-                      <span className="text-2xl">{speaker.flag}</span>
-                      <span className="text-xs font-bold text-emerald-800 uppercase tracking-wide">
-                        {speaker.badge} • {speaker.country}
-                      </span>
-                    </div>
-                    <h3 className="font-['Outfit',sans-serif] font-bold text-xl sm:text-2xl text-slate-900 leading-tight">
-                      {speaker.name}
-                    </h3>
-                    <p className="text-xs font-bold text-slate-500 mt-0.5">
-                      {speaker.role}
-                    </p>
-                  </div>
+                {/* Full Uncropped Speaker Poster / Image */}
+                <div className="relative w-full rounded-xl overflow-hidden bg-gradient-to-b from-white to-slate-100/80 p-2 sm:p-3 mb-6 border border-slate-200/80 shadow-xs flex items-center justify-center">
+                  <img
+                    src={speaker.avatar}
+                    alt={speaker.name}
+                    className="w-full max-w-[340px] sm:max-w-[360px] h-auto aspect-[566/800] object-contain rounded-lg drop-shadow-sm transition-transform hover:scale-[1.01] duration-300"
+                    loading="lazy"
+                  />
                 </div>
 
-                <div className="inline-block px-3 py-1 rounded-lg bg-emerald-100 text-emerald-900 font-bold text-xs mb-4">
+                {/* Country and Status Badges */}
+                <div className="flex items-center justify-between gap-2 mb-3">
+                  <div className="flex items-center gap-2">
+                    <span className="text-xl">{speaker.flag}</span>
+                    <span className="text-xs font-bold text-emerald-800 uppercase tracking-wide">
+                      {speaker.badge} • {speaker.country}
+                    </span>
+                  </div>
+                  <span className="text-[11px] font-semibold bg-emerald-100 text-emerald-900 px-2.5 py-0.5 rounded-full">
+                    Confirmado
+                  </span>
+                </div>
+
+                {/* Specialty Title Badge */}
+                <div className="inline-block px-3 py-1.5 rounded-lg bg-emerald-50 text-emerald-900 font-bold text-xs border border-emerald-200/60 mb-4">
                   {speaker.title}
                 </div>
 
@@ -70,7 +77,7 @@ export const SpeakersSection: React.FC = () => {
                 </ul>
               </div>
 
-              <div className="border-t border-slate-200 pt-4 flex items-center justify-between text-xs text-slate-500 font-medium">
+              <div className="border-t border-slate-200 pt-4 flex items-center justify-between text-xs text-slate-500 font-medium mt-auto">
                 <span className="flex items-center gap-1.5">
                   <Globe className="w-3.5 h-3.5 text-emerald-700" />
                   Presencial en Caracas, Maracay y Lecherías
@@ -82,18 +89,28 @@ export const SpeakersSection: React.FC = () => {
         </div>
 
         {/* Sponsor Banner */}
-        <div className="mt-12 p-6 rounded-2xl bg-slate-100 border border-slate-200 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
+        <div className="mt-12 p-6 rounded-2xl bg-slate-50 border border-slate-200 flex flex-col sm:flex-row items-center justify-between gap-6 text-center sm:text-left">
           <div>
-            <p className="text-xs uppercase font-bold tracking-wider text-slate-500">Tecnología y Respaldo</p>
-            <p className="font-['Outfit',sans-serif] font-bold text-slate-900 text-lg">Patrocinado por Mindray Animal Medical & Mindvet Academy</p>
+            <p className="text-xs uppercase font-bold tracking-wider text-emerald-800 mb-1">Tecnología y Respaldo</p>
+            <p className="font-['Outfit',sans-serif] font-bold text-slate-900 text-lg">
+              Patrocinado por Mindray Animal Medical & Mindvet Academy
+            </p>
           </div>
-          <div className="flex items-center gap-3">
-            <span className="px-3 py-1.5 rounded-lg bg-white font-bold text-xs text-slate-700 border border-slate-300">
-              Analizadores In Vitro
-            </span>
-            <span className="px-3 py-1.5 rounded-lg bg-white font-bold text-xs text-slate-700 border border-slate-300">
-              Certificación Oficial
-            </span>
+          <div className="bg-white py-3 px-6 rounded-xl border border-slate-200 shadow-sm flex items-center justify-center">
+            <a
+              href="https://postimg.cc/tnQB2Hzx"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center hover:opacity-90 transition-opacity"
+              title="Mindray Animal Medical"
+            >
+              <img
+                src="https://i.postimg.cc/tnQB2Hzx/logo-dark3.png"
+                alt="Mindray Animal Medical"
+                className="h-9 sm:h-11 w-auto object-contain"
+                loading="lazy"
+              />
+            </a>
           </div>
         </div>
 

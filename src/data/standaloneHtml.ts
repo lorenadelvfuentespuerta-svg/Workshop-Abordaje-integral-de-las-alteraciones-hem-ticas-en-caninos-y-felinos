@@ -5,9 +5,11 @@ export const STANDALONE_HTML = `<!DOCTYPE html>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Abordaje integral de las alteraciones hemáticas en caninos y felinos | Innovett & Mindray</title>
+  <link rel="icon" type="image/png" href="https://i.postimg.cc/PNB5dVS0/Logo-Innovett-sin-fondo-(1)-(1).png">
   <meta name="description" content="Workshop teórico-práctico: Abordaje integral de las alteraciones hemáticas en caninos y felinos. Caracas, Maracay y Lecherías. Ponentes internacionales y práctica en analizadores Mindray.">
   <meta property="og:title" content="Abordaje integral de las alteraciones hemáticas en caninos y felinos | Innovett & Mindray">
   <meta property="og:description" content="Workshop teórico-práctico: Abordaje integral de las alteraciones hemáticas en caninos y felinos. Caracas, Maracay y Lecherías. Ponentes internacionales y práctica en analizadores Mindray.">
+  <meta property="og:image" content="https://i.postimg.cc/PNB5dVS0/Logo-Innovett-sin-fondo-(1)-(1).png">
   <meta property="og:type" content="website">
 
   <!-- Google Fonts -->
@@ -63,13 +65,8 @@ export const STANDALONE_HTML = `<!DOCTYPE html>
   <!-- Header -->
   <header class="bg-white/95 backdrop-blur-md border-b border-slate-200 sticky top-9 z-40">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 h-20 flex items-center justify-between">
-      <a href="#" class="flex items-center gap-2" title="Innovett Animal Care">
-        <svg viewBox="0 0 520 165" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-10 sm:h-11 w-auto" role="img" aria-label="Innovett animal care">
-          <circle cx="27" cy="46" r="14" fill="#156534" />
-          <path d="M 33 41 C 100 -12, 330 -10, 442 34 C 330 3, 105 5, 30 46 Z" fill="#156534" />
-          <text x="12" y="118" fill="#156534" font-family="'Outfit', 'Montserrat', 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif" font-size="92" font-weight="900" letter-spacing="-0.04em">innovett</text>
-          <text x="512" y="156" text-anchor="end" fill="#156534" font-family="'Outfit', 'Montserrat', 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif" font-size="36" font-weight="800" letter-spacing="0.01em">animal care</text>
-        </svg>
+      <a href="#" class="flex items-center gap-3" title="Innovett Animal Care">
+        <img src="https://i.postimg.cc/PNB5dVS0/Logo-Innovett-sin-fondo-(1)-(1).png" alt="Logo Innovett Animal Care" class="h-10 sm:h-12 w-auto object-contain">
       </a>
       <nav class="hidden md:flex items-center gap-6 text-sm font-semibold text-slate-600">
         <a href="#propuesta" class="hover:text-emerald-800 transition-colors">Propuesta de Valor</a>
@@ -112,18 +109,18 @@ export const STANDALONE_HTML = `<!DOCTYPE html>
           <div class="grid grid-cols-3 gap-2 sm:gap-4 p-4 sm:p-5 rounded-2xl bg-white border border-slate-200 shadow-sm mb-8">
             <div class="text-center p-2 rounded-xl bg-slate-50 border border-slate-100">
               <span class="block text-[11px] font-bold uppercase text-emerald-800 tracking-wider">Caracas</span>
-              <strong class="block text-sm sm:text-base font-extrabold text-slate-900">21 Nov</strong>
-              <span class="text-[10px] text-slate-500 font-medium">Sede por confirmar</span>
+              <strong class="block text-sm sm:text-base font-extrabold text-slate-900">Lunes 16 Nov</strong>
+              <span class="text-[10px] text-slate-500 font-medium">8:00 AM - 5:00 PM</span>
             </div>
             <div class="text-center p-2 rounded-xl bg-slate-50 border border-slate-100">
               <span class="block text-[11px] font-bold uppercase text-emerald-800 tracking-wider">Maracay</span>
-              <strong class="block text-sm sm:text-base font-extrabold text-slate-900">23 Nov</strong>
-              <span class="text-[10px] text-slate-500 font-medium">Sede por confirmar</span>
+              <strong class="block text-sm sm:text-base font-extrabold text-slate-900">Mié 18 Nov</strong>
+              <span class="text-[10px] text-slate-500 font-medium">8:00 AM - 5:00 PM</span>
             </div>
             <div class="text-center p-2 rounded-xl bg-slate-50 border border-slate-100">
               <span class="block text-[11px] font-bold uppercase text-emerald-800 tracking-wider">Lecherías</span>
-              <strong class="block text-sm sm:text-base font-extrabold text-slate-900">25 Nov</strong>
-              <span class="text-[10px] text-slate-500 font-medium">Sede por confirmar</span>
+              <strong class="block text-sm sm:text-base font-extrabold text-slate-900">Vie 20 Nov</strong>
+              <span class="text-[10px] text-slate-500 font-medium">8:00 AM - 5:00 PM</span>
             </div>
           </div>
 
@@ -261,8 +258,8 @@ export const STANDALONE_HTML = `<!DOCTYPE html>
               <span class="text-xs font-semibold text-slate-500">8:00 AM - 5:00 PM</span>
             </div>
             <h3 class="font-display font-extrabold text-2xl text-slate-900 mb-1">Caracas</h3>
-            <p class="text-sm font-bold text-emerald-800 mb-3">Jueves 21 de Noviembre</p>
-            <p class="text-xs text-slate-600 mb-4"><strong>Lugar:</strong> Sede por confirmar (se notificará oportunamente a los inscritos).</p>
+            <p class="text-sm font-bold text-emerald-800 mb-3">Lunes 16 de Noviembre</p>
+            <p class="text-xs text-slate-600 mb-4"><strong>Instalaciones:</strong> Salón de conferencias corporativo con estacionamiento.</p>
             <ul class="text-xs text-slate-600 space-y-1.5 border-t border-slate-100 pt-3 mb-6">
               <li>• Salón de conferencias climatizado</li>
               <li>• Estación práctica de microscopía y Mindray</li>
@@ -282,8 +279,8 @@ export const STANDALONE_HTML = `<!DOCTYPE html>
               <span class="text-xs font-semibold text-slate-500">8:00 AM - 5:00 PM</span>
             </div>
             <h3 class="font-display font-extrabold text-2xl text-slate-900 mb-1">Maracay</h3>
-            <p class="text-sm font-bold text-emerald-800 mb-3">Sábado 23 de Noviembre</p>
-            <p class="text-xs text-slate-600 mb-4"><strong>Lugar:</strong> Sede por confirmar (se notificará oportunamente a los inscritos).</p>
+            <p class="text-sm font-bold text-emerald-800 mb-3">Miércoles 18 de Noviembre</p>
+            <p class="text-xs text-slate-600 mb-4"><strong>Instalaciones:</strong> Salón principal de conferencias con estacionamiento.</p>
             <ul class="text-xs text-slate-600 space-y-1.5 border-t border-slate-100 pt-3 mb-6">
               <li>• Salón principal de eventos</li>
               <li>• Estación práctica de microscopía y Mindray</li>
@@ -303,8 +300,8 @@ export const STANDALONE_HTML = `<!DOCTYPE html>
               <span class="text-xs font-semibold text-slate-500">8:00 AM - 5:00 PM</span>
             </div>
             <h3 class="font-display font-extrabold text-2xl text-slate-900 mb-1">Lecherías</h3>
-            <p class="text-sm font-bold text-emerald-800 mb-3">Lunes 25 de Noviembre</p>
-            <p class="text-xs text-slate-600 mb-4"><strong>Lugar:</strong> Sede por confirmar (se notificará oportunamente a los inscritos).</p>
+            <p class="text-sm font-bold text-emerald-800 mb-3">Viernes 20 de Noviembre</p>
+            <p class="text-xs text-slate-600 mb-4"><strong>Instalaciones:</strong> Salón ejecutivo de entrenamiento con estacionamiento.</p>
             <ul class="text-xs text-slate-600 space-y-1.5 border-t border-slate-100 pt-3 mb-6">
               <li>• Salón ejecutivo de entrenamiento</li>
               <li>• Estación práctica de microscopía y Mindray</li>
@@ -331,33 +328,145 @@ export const STANDALONE_HTML = `<!DOCTYPE html>
         </h2>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
         <!-- Ponente 1 -->
-        <div class="bg-slate-50 rounded-2xl p-7 border border-slate-200 flex flex-col justify-between">
+        <div class="bg-slate-50 rounded-2xl p-6 sm:p-7 border border-slate-200 flex flex-col justify-between shadow-sm hover:border-emerald-700/60 transition-all">
           <div>
-            <div class="flex items-center gap-2 mb-3">
-              <span class="text-xs font-bold text-emerald-800 uppercase bg-emerald-100 px-2.5 py-0.5 rounded">México • Ponente Magistral</span>
+            <!-- Full Uncropped Speaker Poster / Image -->
+            <div class="relative w-full rounded-xl overflow-hidden bg-gradient-to-b from-white to-slate-100/80 p-2 sm:p-3 mb-6 border border-slate-200/80 shadow-xs flex items-center justify-center">
+              <img
+                src="https://i.postimg.cc/DfBbt2PR/pablo-png-para-web.png"
+                alt="Biól. MVZ Pablo José Morales Orozco"
+                class="w-full max-w-[340px] sm:max-w-[360px] h-auto aspect-[566/800] object-contain rounded-lg drop-shadow-sm transition-transform hover:scale-[1.01] duration-300"
+                loading="lazy"
+              >
             </div>
-            <h3 class="font-display font-bold text-2xl text-slate-900 mb-1">Dr. Andrés R. R.</h3>
-            <p class="text-xs font-bold text-slate-500 mb-3">MV • MVZ • M.Sc. • Ph.D.</p>
-            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed mb-4">
-              Médico Veterinario Zootecnista (Univ. de Caldas), Magíster en Ciencias Veterinarias y Doctor (Ph.D.) en Ciencias de la Producción y de la Salud Animal por la UNAM (México). Referente latinoamericano en patología clínica, hematología y oncología diagnóstica.
-            </p>
+
+            <!-- Country and Status Badges -->
+            <div class="flex items-center justify-between gap-2 mb-3">
+              <div class="flex items-center gap-2">
+                <span class="text-xl">🇲🇽</span>
+                <span class="text-xs font-bold text-emerald-800 uppercase tracking-wide">
+                  Ponente Internacional • México
+                </span>
+              </div>
+              <span class="text-[11px] font-semibold bg-emerald-100 text-emerald-900 px-2.5 py-0.5 rounded-full">
+                Confirmado
+              </span>
+            </div>
+
+            <!-- Specialty Title Badge -->
+            <div class="inline-block px-3 py-1.5 rounded-lg bg-emerald-50 text-emerald-900 font-bold text-xs border border-emerald-200/60 mb-4">
+              Especialista en Hematología y Hemato-oncología Veterinaria
+            </div>
+
+            <!-- Bio highlights -->
+            <ul class="space-y-2.5 text-xs sm:text-sm text-slate-700 leading-relaxed mb-6">
+              <li class="flex items-start gap-2">
+                <span class="text-emerald-700 font-bold mt-0.5">•</span>
+                <span>Formado en el Instituto de Hematopatología y en la Universidad de Guadalajara (UDG), México.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-emerald-700 font-bold mt-0.5">•</span>
+                <span>Sólida trayectoria médica con estancias de especialización en Croacia, Costa Rica y España.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-emerald-700 font-bold mt-0.5">•</span>
+                <span>Miembro activo de la AVHTM y divulgador de casos clínicos de alta complejidad hemato-oncológica.</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="border-t border-slate-200 pt-4 flex items-center justify-between text-xs text-slate-500 font-medium mt-auto">
+            <span class="flex items-center gap-1.5">
+              <svg class="w-3.5 h-3.5 text-emerald-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" stroke-width="2"></circle><line x1="2" y1="12" x2="22" y2="12" stroke-width="2"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" stroke-width="2"></path></svg>
+              Presencial en Caracas, Maracay y Lecherías
+            </span>
+            <span class="text-emerald-800 font-bold">100% Confirmado</span>
           </div>
         </div>
 
         <!-- Ponente 2 -->
-        <div class="bg-slate-50 rounded-2xl p-7 border border-slate-200 flex flex-col justify-between">
+        <div class="bg-slate-50 rounded-2xl p-6 sm:p-7 border border-slate-200 flex flex-col justify-between shadow-sm hover:border-emerald-700/60 transition-all">
           <div>
-            <div class="flex items-center gap-2 mb-3">
-              <span class="text-xs font-bold text-blue-800 uppercase bg-blue-100 px-2.5 py-0.5 rounded">Colombia • Especialista Mindray</span>
+            <!-- Full Uncropped Speaker Poster / Image -->
+            <div class="relative w-full rounded-xl overflow-hidden bg-gradient-to-b from-white to-slate-100/80 p-2 sm:p-3 mb-6 border border-slate-200/80 shadow-xs flex items-center justify-center">
+              <img
+                src="https://i.postimg.cc/1tYsrYDK/TATIANA.png"
+                alt="Lcda. Mgst. Tatiana Rodríguez Méndez"
+                class="w-full max-w-[340px] sm:max-w-[360px] h-auto aspect-[566/800] object-contain rounded-lg drop-shadow-sm transition-transform hover:scale-[1.01] duration-300"
+                loading="lazy"
+              >
             </div>
-            <h3 class="font-display font-bold text-2xl text-slate-900 mb-1">Tatiana Rodríguez Méndez</h3>
-            <p class="text-xs font-bold text-slate-500 mb-3">Lcda. Mgst. en Microbiología</p>
-            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed mb-4">
-              Bacterióloga y Laboratorista Clínica con énfasis en Diagnóstico Clínico Veterinario. Especialista de Aplicaciones LATAM para la línea de Diagnóstico In Vitro (IVD) de Mindray Animal Medical, liderando talleres de automatización en todo el continente.
-            </p>
+
+            <!-- Country and Status Badges -->
+            <div class="flex items-center justify-between gap-2 mb-3">
+              <div class="flex items-center gap-2">
+                <span class="text-xl">🇨🇴</span>
+                <span class="text-xs font-bold text-emerald-800 uppercase tracking-wide">
+                  Especialista LATAM • Colombia
+                </span>
+              </div>
+              <span class="text-[11px] font-semibold bg-emerald-100 text-emerald-900 px-2.5 py-0.5 rounded-full">
+                Confirmado
+              </span>
+            </div>
+
+            <!-- Specialty Title Badge -->
+            <div class="inline-block px-3 py-1.5 rounded-lg bg-emerald-50 text-emerald-900 font-bold text-xs border border-emerald-200/60 mb-4">
+              Especialista en Laboratorio Clínico Veterinario y Microbiología
+            </div>
+
+            <!-- Bio highlights -->
+            <ul class="space-y-2.5 text-xs sm:text-sm text-slate-700 leading-relaxed mb-6">
+              <li class="flex items-start gap-2">
+                <span class="text-emerald-700 font-bold mt-0.5">•</span>
+                <span>Bacterióloga y Laboratorista Clínica con énfasis en Diagnóstico Clínico Veterinario.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-emerald-700 font-bold mt-0.5">•</span>
+                <span>Maestría en Microbiología y diplomado en Pequeñas Especies con profundo dominio analítico.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-emerald-700 font-bold mt-0.5">•</span>
+                <span>Especialista de Aplicaciones LATAM para la línea de Diagnóstico In Vitro (IVD) de Mindray Animal Medical.</span>
+              </li>
+            </ul>
           </div>
+
+          <div class="border-t border-slate-200 pt-4 flex items-center justify-between text-xs text-slate-500 font-medium mt-auto">
+            <span class="flex items-center gap-1.5">
+              <svg class="w-3.5 h-3.5 text-emerald-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" stroke-width="2"></circle><line x1="2" y1="12" x2="22" y2="12" stroke-width="2"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" stroke-width="2"></path></svg>
+              Presencial en Caracas, Maracay y Lecherías
+            </span>
+            <span class="text-emerald-800 font-bold">100% Confirmado</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sponsor Banner -->
+      <div class="mt-12 p-6 rounded-2xl bg-slate-50 border border-slate-200 flex flex-col sm:flex-row items-center justify-between gap-6 text-center sm:text-left">
+        <div>
+          <p class="text-xs uppercase font-bold tracking-wider text-emerald-800 mb-1">Tecnología y Respaldo</p>
+          <p class="font-display font-bold text-slate-900 text-lg">
+            Patrocinado por Mindray Animal Medical & Mindvet Academy
+          </p>
+        </div>
+        <div class="bg-white py-3 px-6 rounded-xl border border-slate-200 shadow-sm flex items-center justify-center">
+          <a
+            href="https://postimg.cc/tnQB2Hzx"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center hover:opacity-90 transition-opacity"
+            title="Mindray Animal Medical"
+          >
+            <img
+              src="https://i.postimg.cc/tnQB2Hzx/logo-dark3.png"
+              alt="Mindray Animal Medical"
+              class="h-9 sm:h-11 w-auto object-contain"
+              loading="lazy"
+            >
+          </a>
         </div>
       </div>
     </div>
@@ -443,7 +552,7 @@ export const STANDALONE_HTML = `<!DOCTYPE html>
 
       <!-- Card Container for Form -->
       <div class="bg-white rounded-3xl p-6 sm:p-10 border border-slate-200 shadow-xl">
-        <form id="registroForm" class="space-y-5" method="POST" action="https://script.google.com/macros/s/AKfycbxTCxU-lLxkZTk7tqNrsyEUFSCwIkwyoVpNJ6bEfbMATgD9Xa0JEKTqZyEtit6FQlWn/exec">
+        <form id="registroForm" class="space-y-5" method="POST" action="https://script.google.com/macros/s/AKfycbxDfBIS-oFT-gbjOiJVQ-fyOZDF94DABr2hHSEXX5NbAZTq6tp-zbBh0qe93VXfsXlN/exec">
           
           <!-- Sede del Workshop -->
           <div>
@@ -457,9 +566,9 @@ export const STANDALONE_HTML = `<!DOCTYPE html>
               class="w-full px-4 py-3.5 rounded-xl border border-slate-300 focus:border-emerald-700 focus:ring-2 focus:ring-emerald-700/20 bg-slate-50 text-slate-900 text-sm font-semibold transition-all outline-none"
             >
               <option value="" disabled selected>Elige la ciudad donde asistirás...</option>
-              <option value="Caracas">Caracas - Jueves 21 de Noviembre (Sede por confirmar)</option>
-              <option value="Maracay">Maracay - Sábado 23 de Noviembre (Sede por confirmar)</option>
-              <option value="Lecherías">Lecherías - Lunes 25 de Noviembre (Sede por confirmar)</option>
+              <option value="Caracas">Caracas - Lunes 16 de Noviembre</option>
+              <option value="Maracay">Maracay - Miércoles 18 de Noviembre</option>
+              <option value="Lecherías">Lecherías - Viernes 20 de Noviembre</option>
             </select>
           </div>
 
@@ -596,12 +705,7 @@ export const STANDALONE_HTML = `<!DOCTYPE html>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center pb-10 border-b border-slate-800">
         <div>
           <div class="mb-4">
-            <svg viewBox="0 0 520 165" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-12 w-auto" role="img" aria-label="Innovett animal care">
-              <circle cx="27" cy="46" r="14" fill="#ffffff" />
-              <path d="M 33 41 C 100 -12, 330 -10, 442 34 C 330 3, 105 5, 30 46 Z" fill="#ffffff" />
-              <text x="12" y="118" fill="#ffffff" font-family="'Outfit', 'Montserrat', 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif" font-size="92" font-weight="900" letter-spacing="-0.04em">innovett</text>
-              <text x="512" y="156" text-anchor="end" fill="#34d399" font-family="'Outfit', 'Montserrat', 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif" font-size="36" font-weight="800" letter-spacing="0.01em">animal care</text>
-            </svg>
+            <img src="https://i.postimg.cc/PNB5dVS0/Logo-Innovett-sin-fondo-(1)-(1).png" alt="Logo Innovett Animal Care" class="h-12 w-auto object-contain brightness-0 invert">
           </div>
           <p class="text-slate-400 text-sm max-w-md leading-relaxed mb-4">
             Abordaje integral de las alteraciones hemáticas en caninos y felinos. Formación médica veterinaria de vanguardia en Venezuela.
@@ -650,7 +754,7 @@ export const STANDALONE_HTML = `<!DOCTYPE html>
       btn.innerHTML = 'Procesando registro...';
       btn.disabled = true;
 
-      const scriptURL = 'https://script.google.com/macros/s/AKfycbxTCxU-lLxkZTk7tqNrsyEUFSCwIkwyoVpNJ6bEfbMATgD9Xa0JEKTqZyEtit6FQlWn/exec';
+      const scriptURL = 'https://script.google.com/macros/s/AKfycbxDfBIS-oFT-gbjOiJVQ-fyOZDF94DABr2hHSEXX5NbAZTq6tp-zbBh0qe93VXfsXlN/exec';
 
       // Convertimos los datos a texto puro (application/x-www-form-urlencoded) para que Google Apps Script llene la hoja correctamente
       const params = new URLSearchParams(formData).toString();
