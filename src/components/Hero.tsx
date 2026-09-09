@@ -42,7 +42,7 @@ export const Hero: React.FC<HeroProps> = ({ selectedCity, onSelectCity }) => {
         <div className="max-w-3xl">
           <h1 className="font-['Outfit',sans-serif] font-extrabold text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-slate-900 tracking-tight leading-[1.12] mb-6">
             Abordaje integral de las{' '}
-            <span className="text-emerald-800 underline decoration-emerald-400 decoration-wavy underline-offset-4">
+            <span className="text-emerald-800">
               alteraciones hemáticas
             </span>{' '}
             en caninos y felinos
@@ -94,21 +94,21 @@ export const Hero: React.FC<HeroProps> = ({ selectedCity, onSelectCity }) => {
           {/* Primary CTA Buttons */}
           <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3.5 mb-10">
             <a
-              href={getWhatsAppLink(currentCityObj.city)}
-              target="_blank"
-              rel="noopener noreferrer"
+              href="#registro"
               className="inline-flex items-center justify-center gap-2.5 px-7 py-4 rounded-xl bg-emerald-800 hover:bg-emerald-700 text-white font-bold text-base shadow-lg shadow-emerald-800/25 transition-all hover:translate-y-[-1px] active:translate-y-[1px]"
             >
-              <MessageCircle className="w-5 h-5 fill-current" />
-              <span>Apartar Cupo en {currentCityObj.city} ($160)</span>
+              <span>Formulario de Inscripción en {currentCityObj.city} ($160)</span>
               <ArrowRight className="w-4 h-4" />
             </a>
 
             <a
-              href="#programa"
+              href={getWhatsAppLink(currentCityObj.city)}
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-2 px-6 py-4 rounded-xl bg-white hover:bg-slate-50 text-slate-800 font-bold text-base border border-slate-300 shadow-sm transition-all"
             >
-              <span>Ver Temario Detallado</span>
+              <MessageCircle className="w-5 h-5 text-emerald-600 fill-current" />
+              <span>Consultar por WhatsApp</span>
             </a>
           </div>
 

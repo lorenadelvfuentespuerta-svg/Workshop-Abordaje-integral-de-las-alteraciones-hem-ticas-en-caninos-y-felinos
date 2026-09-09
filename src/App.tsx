@@ -13,6 +13,7 @@ import { CitiesSection } from './components/CitiesSection';
 import { AgendaSection } from './components/AgendaSection';
 import { SpeakersSection } from './components/SpeakersSection';
 import { PricingSection } from './components/PricingSection';
+import { RegistrationSection } from './components/RegistrationSection';
 import { FaqSection } from './components/FaqSection';
 import { ContactFooter } from './components/ContactFooter';
 import { HtmlCodeModal } from './components/HtmlCodeModal';
@@ -62,6 +63,12 @@ export default function App() {
 
         {/* Investment & Pricing Comparison */}
         <PricingSection selectedCity={currentCityObj.city} />
+
+        {/* Official Interactive Registration Form with Google Sheets & WhatsApp Integration */}
+        <RegistrationSection
+          selectedCity={selectedCity}
+          onSelectCity={(cityId) => setSelectedCity(cityId)}
+        />
 
         {/* FAQ Section */}
         <FaqSection />

@@ -40,10 +40,10 @@
     }
   </script>
 </head>
-<body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-emerald-800 selection:text-white pb-20 md:pb-0">
+<body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-emerald-800 selection:text-white pb-24 md:pb-0">
 
   <!-- Urgency Top Bar -->
-  <div class="bg-slate-900 text-white text-xs sm:text-sm py-2 px-4 border-b border-slate-800 sticky top-0 z-50">
+  <aside aria-label="Aviso de preventa" class="bg-slate-900 text-white text-xs sm:text-sm py-2 px-4 border-b border-slate-800 sticky top-0 z-50">
     <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2 text-center sm:text-left">
       <div class="flex items-center gap-2">
         <span class="inline-flex items-center px-2 py-0.5 rounded text-[10px] font-bold bg-amber-400 text-slate-950 uppercase tracking-wide">
@@ -53,16 +53,16 @@
           Asegura tu cupo por <strong class="text-white font-bold">$160</strong> antes del <strong>30 de Octubre</strong> (Ahorras $30).
         </span>
       </div>
-      <a href="https://wa.me/584248767342?text=%C2%A1Hola%20Lorena!%20Deseo%20aprovechar%20la%20tarifa%20de%20preventa%20($160)%20para%20el%20Workshop%20de%20Hematolog%C3%ADa%20Veterinaria." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 font-bold text-emerald-400 hover:text-emerald-300 underline underline-offset-4 whitespace-nowrap transition-colors">
-        Asegurar cupo en WhatsApp →
+      <a href="#registro" class="inline-flex items-center gap-1.5 font-bold text-emerald-400 hover:text-emerald-300 underline underline-offset-4 whitespace-nowrap transition-colors">
+        Inscribirme ahora →
       </a>
     </div>
-  </div>
+  </aside>
 
   <!-- Header -->
   <header class="bg-white/95 backdrop-blur-md border-b border-slate-200 sticky top-9 z-40">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 h-20 flex items-center justify-between">
-      <a href="#" class="flex items-center gap-2">
+      <a href="#" class="flex items-center gap-2" title="Innovett Animal Care">
         <svg viewBox="0 0 520 165" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-10 sm:h-11 w-auto" role="img" aria-label="Innovett animal care">
           <circle cx="27" cy="46" r="14" fill="#156534" />
           <path d="M 33 41 C 100 -12, 330 -10, 442 34 C 330 3, 105 5, 30 46 Z" fill="#156534" />
@@ -71,353 +71,323 @@
         </svg>
       </a>
       <nav class="hidden md:flex items-center gap-6 text-sm font-semibold text-slate-600">
-        <a href="#beneficios" class="hover:text-emerald-800 transition-colors">Beneficios</a>
-        <a href="#ciudades" class="hover:text-emerald-800 transition-colors">Fechas y Sedes</a>
-        <a href="#programa" class="hover:text-emerald-800 transition-colors">Temario</a>
-        <a href="#ponentes" class="hover:text-emerald-800 transition-colors">Ponentes</a>
+        <a href="#propuesta" class="hover:text-emerald-800 transition-colors">Propuesta de Valor</a>
+        <a href="#ciudades" class="hover:text-emerald-800 transition-colors">Sedes y Fechas</a>
+        <a href="#ponentes" class="hover:text-emerald-800 transition-colors">Especialistas</a>
         <a href="#inversion" class="hover:text-emerald-800 transition-colors">Inversión</a>
       </nav>
-      <a href="https://wa.me/584248767342?text=%C2%A1Hola%20Lorena!%20Deseo%20inscribirme%20en%20el%20Workshop%20de%20Hematolog%C3%ADa%20Veterinaria." target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-emerald-800 hover:bg-emerald-700 text-white font-bold text-sm shadow-md transition-all">
-        Inscribirme vía WhatsApp
+      <a href="#registro" class="hidden sm:inline-flex items-center justify-center px-5 py-2.5 rounded-xl bg-emerald-800 hover:bg-emerald-700 text-white text-sm font-bold shadow-sm transition-all">
+        Registrarme al Workshop
       </a>
     </div>
   </header>
 
   <!-- Hero Section -->
-  <section class="relative pt-8 pb-16 md:pt-14 md:pb-24 bg-gradient-to-b from-white via-slate-50 to-slate-100 border-b border-slate-200">
+  <section class="relative bg-gradient-to-b from-white via-emerald-50/40 to-slate-50 pt-10 sm:pt-14 pb-16 md:pb-24 border-b border-slate-200 overflow-hidden">
     <div class="max-w-6xl mx-auto px-4 sm:px-6">
-      <div class="flex flex-wrap items-center gap-2 mb-4">
-        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-emerald-100 text-emerald-800 border border-emerald-200">
-          Workshop Presencial Teórico - Práctico
+      
+      <!-- Badges -->
+      <div class="flex flex-wrap items-center gap-2 mb-6">
+        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-emerald-100 text-emerald-900 border border-emerald-300">
+          🔬 Workshop Presencial Teórico - Práctico
         </span>
         <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-slate-100 text-slate-700 border border-slate-200">
-          📍 Caracas • Maracay • Lecherías
-        </span>
-        <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-red-50 text-rose-700 border border-rose-200">
-          Patrocinado por Mindray Animal Medical & Mindvet Academy
+          Alianza con Mindray Animal Medical & Mindvet Academy
         </span>
       </div>
 
-      <div class="max-w-3xl">
-        <h1 class="font-display font-extrabold text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-slate-900 tracking-tight leading-[1.12] mb-6">
-          Abordaje integral de las <span class="text-emerald-800 underline decoration-emerald-300 decoration-wavy underline-offset-4">alteraciones hemáticas</span> en caninos y felinos
-        </h1>
-
-        <p class="text-base sm:text-lg md:text-xl text-slate-600 leading-relaxed mb-8">
-          Aprende a interpretar hemogramas complejos, clasificar anemias y trombocitopenias con precisión diagnóstica y realiza <strong>práctica directa en analizadores automatizados Mindray</strong> con especialistas internacionales de México y Colombia.
-        </p>
-
-        <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3.5 mb-10">
-          <a href="#ciudades" class="inline-flex items-center justify-center gap-2 px-7 py-4 rounded-xl bg-emerald-800 hover:bg-emerald-700 text-white font-bold text-base shadow-lg shadow-emerald-800/25 transition-all">
-            Seleccionar Ciudad y Reservar Cupo
-          </a>
-          <a href="https://wa.me/584248767342?text=%C2%A1Hola%20Lorena!%20Quiero%20solicitar%20informaci%C3%B3n%20del%20Workshop%20de%20Hematolog%C3%ADa%20Veterinaria." target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 px-6 py-4 rounded-xl bg-white hover:bg-slate-50 text-slate-800 font-bold text-base border border-slate-300 shadow-sm transition-all">
-            Consultar con Asesora
-          </a>
-        </div>
-
-        <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-6 border-t border-slate-200">
-          <div>
-            <p class="text-xs text-slate-500 font-medium uppercase tracking-wider">Duración</p>
-            <p class="font-display font-bold text-slate-900 text-base sm:text-lg">11 Horas</p>
-            <p class="text-xs text-slate-500">08:00 a 19:00 hrs</p>
-          </div>
-          <div>
-            <p class="text-xs text-slate-500 font-medium uppercase tracking-wider">Metodología</p>
-            <p class="font-display font-bold text-slate-900 text-base sm:text-lg">Teórico + Práctico</p>
-            <p class="text-xs text-slate-500">Con analizadores reales</p>
-          </div>
-          <div>
-            <p class="text-xs text-slate-500 font-medium uppercase tracking-wider">Ponentes</p>
-            <p class="font-display font-bold text-slate-900 text-base sm:text-lg">Internacionales</p>
-            <p class="text-xs text-slate-500">México 🇲🇽 y Colombia 🇨🇴</p>
-          </div>
-          <div>
-            <p class="text-xs text-slate-500 font-medium uppercase tracking-wider">Incluye</p>
-            <p class="font-display font-bold text-slate-900 text-base sm:text-lg">Todo Incluido</p>
-            <p class="text-xs text-slate-500">Almuerzo, Coffee y Certificado</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Problem / Solution Section -->
-  <section id="beneficios" class="py-16 md:py-20 bg-white border-b border-slate-200">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6">
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+        <!-- Text & Dates -->
         <div class="lg:col-span-7">
-          <span class="text-xs font-bold text-rose-600 tracking-wider uppercase bg-rose-50 px-3 py-1 rounded-full border border-rose-100 inline-block mb-3">
-            La Realidad en la Clínica Diaria
-          </span>
-          <h2 class="font-display font-extrabold text-2xl sm:text-3xl md:text-4xl text-slate-900 tracking-tight mb-5">
-            ¿Cuántas alteraciones hemáticas están pasando desapercibidas en tu consulta?
-          </h2>
-          <p class="text-slate-600 text-base leading-relaxed mb-4">
-            Las enfermedades hematológicas —<strong>anemias, trombocitopenias, leucocitosis, leucopenias y alteraciones linfocitarias</strong>— figuran entre los motivos de consulta más frecuentes en la clínica de pequeños animales, y con frecuencia son subdiagnosticadas o mal interpretadas por falta de una formación específica en fisiopatología hemática.
+          <h1 class="font-display font-extrabold text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-slate-900 tracking-tight leading-[1.12] mb-6">
+            Abordaje integral de las <span class="text-emerald-800">alteraciones hemáticas</span> en caninos y felinos
+          </h1>
+
+          <p class="text-base sm:text-lg text-slate-600 leading-relaxed mb-8">
+            Domina el diagnóstico citológico y automatizado de anemias, trombocitopenias, leucopatías y neoplasias hematopoyéticas con especialistas de México y Colombia. Aprende con casos clínicos reales y práctica en analizadores hematológicos de última generación.
           </p>
-          <p class="text-slate-600 text-base leading-relaxed mb-6">
-            Un abordaje diagnóstico deficiente puede retrasar el tratamiento oportuno y comprometer el pronóstico y la vida del paciente.
-          </p>
-          <div class="space-y-3">
-            <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-200 text-sm text-slate-700">
-              ✓ <strong>Diferenciación exacta de anemias:</strong> Algoritmo metódico para clasificar si es regenerativa, hemolítica o hipoplásica.
+
+          <!-- Key Dates & Locations Summary -->
+          <div class="grid grid-cols-3 gap-2 sm:gap-4 p-4 sm:p-5 rounded-2xl bg-white border border-slate-200 shadow-sm mb-8">
+            <div class="text-center p-2 rounded-xl bg-slate-50 border border-slate-100">
+              <span class="block text-[11px] font-bold uppercase text-emerald-800 tracking-wider">Caracas</span>
+              <strong class="block text-sm sm:text-base font-extrabold text-slate-900">21 Nov</strong>
+              <span class="text-[10px] text-slate-500 font-medium">Sede por confirmar</span>
             </div>
-            <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-200 text-sm text-slate-700">
-              ✓ <strong>Abordaje del paciente trombocitopénico:</strong> Discierne entre trombocitopenia inmunomediada, infecciosa o por consumo.
+            <div class="text-center p-2 rounded-xl bg-slate-50 border border-slate-100">
+              <span class="block text-[11px] font-bold uppercase text-emerald-800 tracking-wider">Maracay</span>
+              <strong class="block text-sm sm:text-base font-extrabold text-slate-900">23 Nov</strong>
+              <span class="text-[10px] text-slate-500 font-medium">Sede por confirmar</span>
             </div>
-            <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-200 text-sm text-slate-700">
-              ✓ <strong>Práctica con analizadores Mindray:</strong> Lee histogramas, curvas de dispersión y correlaciónalas en vivo con frotis sanguíneo.
+            <div class="text-center p-2 rounded-xl bg-slate-50 border border-slate-100">
+              <span class="block text-[11px] font-bold uppercase text-emerald-800 tracking-wider">Lecherías</span>
+              <strong class="block text-sm sm:text-base font-extrabold text-slate-900">25 Nov</strong>
+              <span class="text-[10px] text-slate-500 font-medium">Sede por confirmar</span>
+            </div>
+          </div>
+
+          <!-- Direct CTA -->
+          <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
+            <a href="#registro" class="inline-flex items-center justify-center px-8 py-4 rounded-xl bg-emerald-800 hover:bg-emerald-700 text-white font-bold text-base shadow-lg shadow-emerald-900/15 transition-all text-center">
+              Completar Formulario de Inscripción ↓
+            </a>
+            <div class="flex items-center justify-center gap-2 text-xs text-slate-500 font-medium">
+              <span>✓ Cupos limitados por ciudad</span>
+              <span>•</span>
+              <span>✓ Certificado con aval curricular</span>
             </div>
           </div>
         </div>
 
+        <!-- Quick Info Card -->
         <div class="lg:col-span-5">
-          <div class="bg-gradient-to-br from-slate-900 to-emerald-950 text-white p-7 rounded-2xl shadow-xl border border-slate-800">
-            <span class="text-xs font-bold text-emerald-400 uppercase tracking-widest block mb-2">Compromiso Académico</span>
-            <h3 class="font-display font-bold text-2xl text-white mb-4">Formación de Nivel Internacional en Venezuela</h3>
-            <p class="text-slate-300 text-sm leading-relaxed mb-6">
-              Fortalecer estas competencias responde a una necesidad real de actualización profesional, acercando formación dictada por ponentes internacionales a los médicos veterinarios de Caracas, Maracay y Lecherías.
-            </p>
-            <div class="border-t border-slate-800 pt-5 space-y-3">
-              <div class="flex items-center justify-between text-xs text-slate-300">
-                <span>Aval Institucional:</span>
-                <strong class="text-white">Innovett & Mindray Academy</strong>
-              </div>
-              <div class="flex items-center justify-between text-xs text-slate-300">
-                <span>Intensidad:</span>
-                <strong class="text-white">11 Horas Académicas Certificadas</strong>
-              </div>
-              <div class="flex items-center justify-between text-xs text-slate-300">
-                <span>Almuerzo y Coffee:</span>
-                <strong class="text-white">100% Incluidos</strong>
-              </div>
+          <div class="bg-white rounded-3xl p-6 sm:p-8 border-2 border-emerald-800/20 shadow-xl relative">
+            <div class="absolute -top-3 right-6 bg-amber-400 text-slate-950 text-xs font-black px-3 py-1 rounded-full uppercase tracking-wide">
+              Ahorra $30 en Preventa
             </div>
-            <div class="mt-6">
-              <a href="#inversion" class="w-full text-center block py-3 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold text-sm transition-colors">
-                Ver Precios de Preventa
-              </a>
-            </div>
+            <h3 class="font-display font-bold text-xl text-slate-900 mb-4">Detalles del Programa</h3>
+            <ul class="space-y-3 text-sm text-slate-700 mb-6">
+              <li class="flex items-start gap-2.5">
+                <span class="text-emerald-700 font-bold">✓</span>
+                <span><strong>Horario Intensivo:</strong> 8:00 AM a 5:00 PM (8 horas académicas teórico-prácticas).</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <span class="text-emerald-700 font-bold">✓</span>
+                <span><strong>Metodología Dual:</strong> Interpretación clínica profunda + Taller en analizadores Mindray.</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <span class="text-emerald-700 font-bold">✓</span>
+                <span><strong>Incluye Todo:</strong> Almuerzo completo, coffee breaks continuo, memorias y diploma.</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <span class="text-emerald-700 font-bold">✓</span>
+                <span><strong>Inversión Preventa:</strong> $160 USD (Precio regular: $190 USD a partir del 31 de Octubre).</span>
+              </li>
+            </ul>
+            <a href="#registro" class="w-full block text-center py-3.5 px-4 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-bold text-sm transition-all">
+              Asegurar Mi Cupo Ahora
+            </a>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- 3 Ciudades y Fechas -->
+  <!-- Propuesta de Valor -->
+  <section id="propuesta" class="py-16 md:py-20 bg-white border-b border-slate-200">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="text-center max-w-2xl mx-auto mb-12">
+        <span class="text-xs font-bold text-emerald-800 tracking-wider uppercase bg-emerald-100 px-3 py-1 rounded-full inline-block mb-3">
+          Ventaja Clínica Diferencial
+        </span>
+        <h2 class="font-display font-extrabold text-2xl sm:text-3xl md:text-4xl text-slate-900 tracking-tight mb-4">
+          ¿Por qué este workshop transforma tu práctica diaria?
+        </h2>
+        <p class="text-slate-600 text-sm sm:text-base">
+          Diseñado para médicos veterinarios clínicos y patólogos que buscan pasar de la simple lectura numérica a la resolución diagnóstica certera.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- Card 1 -->
+        <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200 hover:border-emerald-500 hover:shadow-md transition-all">
+          <div class="w-12 h-12 rounded-xl bg-emerald-100 text-emerald-800 flex items-center justify-center font-bold text-xl mb-4">
+            🩺
+          </div>
+          <h3 class="font-display font-bold text-lg text-slate-900 mb-2">Interpretación Integral del Hemograma</h3>
+          <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+            Aprende a correlacionar índices eritrocitarios, recuentos absolutos y dispersogramas con la fisiopatología real del paciente crítico.
+          </p>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200 hover:border-emerald-500 hover:shadow-md transition-all">
+          <div class="w-12 h-12 rounded-xl bg-emerald-100 text-emerald-800 flex items-center justify-center font-bold text-xl mb-4">
+            🔬
+          </div>
+          <h3 class="font-display font-bold text-lg text-slate-900 mb-2">Frotis y Morfología Celular Crítica</h3>
+          <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+            Identificación de inclusiones parasitarias (Mycoplasma, Babesia, Ehrlichia), cambios tóxicos, precursores eritroides y blastos atípicos.
+          </p>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200 hover:border-emerald-500 hover:shadow-md transition-all">
+          <div class="w-12 h-12 rounded-xl bg-emerald-100 text-emerald-800 flex items-center justify-center font-bold text-xl mb-4">
+            ⚡
+          </div>
+          <h3 class="font-display font-bold text-lg text-slate-900 mb-2">Práctica Directa en Equipos Mindray</h3>
+          <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+            Manejo y calibración de analizadores hematológicos veterinarios automatizados de 3 y 5 partes, analizando muestras y curvas de dispersión.
+          </p>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200 hover:border-emerald-500 hover:shadow-md transition-all">
+          <div class="w-12 h-12 rounded-xl bg-emerald-100 text-emerald-800 flex items-center justify-center font-bold text-xl mb-4">
+            🌍
+          </div>
+          <h3 class="font-display font-bold text-lg text-slate-900 mb-2">Especialistas Internacionales</h3>
+          <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+            Acceso directo para debatir casos clínicos complejos con el Dr. Andrés R. R. (México) y la Lcda. Mgst. Tatiana Rodríguez Méndez (Colombia).
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sedes y Fechas Section -->
   <section id="ciudades" class="py-16 md:py-20 bg-slate-50 border-b border-slate-200">
     <div class="max-w-6xl mx-auto px-4 sm:px-6">
       <div class="text-center max-w-2xl mx-auto mb-12">
         <span class="text-xs font-bold text-emerald-800 tracking-wider uppercase bg-emerald-100 px-3 py-1 rounded-full inline-block mb-3">
-          Gira Noviembre Venezuela
+          Gira Nacional Noviembre 2026
         </span>
         <h2 class="font-display font-extrabold text-2xl sm:text-3xl md:text-4xl text-slate-900 tracking-tight mb-4">
-          Ciudades y Fechas Confirmadas
+          Selecciona tu Sede Más Cercana
         </h2>
         <p class="text-slate-600 text-sm sm:text-base">
-          Elige tu ciudad y asegura tu cupo con tarifa de pronto pago ($160) antes del 30 de octubre.
+          Tres fechas estratégicas en las principales ciudades del país con aforo limitado para garantizar la práctica individual en equipos.
         </p>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
         <!-- Caracas -->
-        <div class="bg-white rounded-2xl border-2 border-emerald-800 p-6 flex flex-col justify-between shadow-sm">
+        <div class="bg-white rounded-2xl border-2 border-emerald-800/30 p-6 shadow-sm flex flex-col justify-between">
           <div>
-            <div class="flex items-center justify-between mb-3">
-              <span class="px-2.5 py-1 rounded text-xs font-bold bg-slate-100 text-slate-800">Sede 01</span>
-              <span class="text-xs font-bold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200">Cupos Disponibles</span>
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-xs font-bold px-2.5 py-1 rounded-full bg-emerald-100 text-emerald-800">Fecha 1</span>
+              <span class="text-xs font-semibold text-slate-500">8:00 AM - 5:00 PM</span>
             </div>
-            <h3 class="font-display font-black text-3xl text-slate-900 mb-1">Caracas</h3>
-            <p class="text-emerald-800 font-bold text-base mb-3">Lunes, 16 de Noviembre</p>
-            <p class="text-xs text-slate-500 mb-6">08:00 a 19:00 hrs. Sede confirmada al formalizar inscripción.</p>
+            <h3 class="font-display font-extrabold text-2xl text-slate-900 mb-1">Caracas</h3>
+            <p class="text-sm font-bold text-emerald-800 mb-3">Jueves 21 de Noviembre</p>
+            <p class="text-xs text-slate-600 mb-4"><strong>Lugar:</strong> Sede por confirmar (se notificará oportunamente a los inscritos).</p>
+            <ul class="text-xs text-slate-600 space-y-1.5 border-t border-slate-100 pt-3 mb-6">
+              <li>• Salón de conferencias climatizado</li>
+              <li>• Estación práctica de microscopía y Mindray</li>
+              <li>• Almuerzo buffet y 2 coffee breaks</li>
+            </ul>
           </div>
-          <a href="https://wa.me/584248767342?text=%C2%A1Hola%20Lorena!%20Deseo%20apartar%20mi%20cupo%20con%20preventa%20para%20el%20Workshop%20en%20*Caracas*%20(16%20Nov)." target="_blank" rel="noopener noreferrer" class="w-full text-center py-3.5 px-4 rounded-xl bg-emerald-800 hover:bg-emerald-700 text-white font-bold text-sm shadow-md transition-all">
-            Apartar Cupo en Caracas
+          <a href="#registro" class="w-full text-center py-3 rounded-xl bg-emerald-800 hover:bg-emerald-700 text-white font-bold text-sm transition-all">
+            Inscribirme en Caracas
           </a>
         </div>
 
         <!-- Maracay -->
-        <div class="bg-white rounded-2xl border border-slate-200 p-6 flex flex-col justify-between shadow-sm hover:border-emerald-800 transition-all">
+        <div class="bg-white rounded-2xl border border-slate-200 p-6 shadow-sm flex flex-col justify-between">
           <div>
-            <div class="flex items-center justify-between mb-3">
-              <span class="px-2.5 py-1 rounded text-xs font-bold bg-slate-100 text-slate-800">Sede 02</span>
-              <span class="text-xs font-bold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200">Cupos Disponibles</span>
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-xs font-bold px-2.5 py-1 rounded-full bg-slate-100 text-slate-700">Fecha 2</span>
+              <span class="text-xs font-semibold text-slate-500">8:00 AM - 5:00 PM</span>
             </div>
-            <h3 class="font-display font-black text-3xl text-slate-900 mb-1">Maracay</h3>
-            <p class="text-emerald-800 font-bold text-base mb-3">Miércoles, 18 de Noviembre</p>
-            <p class="text-xs text-slate-500 mb-6">08:00 a 19:00 hrs. Sede confirmada al formalizar inscripción.</p>
+            <h3 class="font-display font-extrabold text-2xl text-slate-900 mb-1">Maracay</h3>
+            <p class="text-sm font-bold text-emerald-800 mb-3">Sábado 23 de Noviembre</p>
+            <p class="text-xs text-slate-600 mb-4"><strong>Lugar:</strong> Sede por confirmar (se notificará oportunamente a los inscritos).</p>
+            <ul class="text-xs text-slate-600 space-y-1.5 border-t border-slate-100 pt-3 mb-6">
+              <li>• Salón principal de eventos</li>
+              <li>• Estación práctica de microscopía y Mindray</li>
+              <li>• Almuerzo y 2 coffee breaks</li>
+            </ul>
           </div>
-          <a href="https://wa.me/584248767342?text=%C2%A1Hola%20Lorena!%20Deseo%20apartar%20mi%20cupo%20con%20preventa%20para%20el%20Workshop%20en%20*Maracay*%20(18%20Nov)." target="_blank" rel="noopener noreferrer" class="w-full text-center py-3.5 px-4 rounded-xl bg-emerald-800 hover:bg-emerald-700 text-white font-bold text-sm shadow-md transition-all">
-            Apartar Cupo en Maracay
+          <a href="#registro" class="w-full text-center py-3 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-bold text-sm transition-all">
+            Inscribirme en Maracay
           </a>
         </div>
 
         <!-- Lecherías -->
-        <div class="bg-white rounded-2xl border border-slate-200 p-6 flex flex-col justify-between shadow-sm hover:border-emerald-800 transition-all">
+        <div class="bg-white rounded-2xl border border-slate-200 p-6 shadow-sm flex flex-col justify-between">
           <div>
-            <div class="flex items-center justify-between mb-3">
-              <span class="px-2.5 py-1 rounded text-xs font-bold bg-slate-100 text-slate-800">Sede 03</span>
-              <span class="text-xs font-bold text-amber-700 bg-amber-50 px-2 py-0.5 rounded border border-amber-200">Últimos Cupos</span>
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-xs font-bold px-2.5 py-1 rounded-full bg-slate-100 text-slate-700">Fecha 3</span>
+              <span class="text-xs font-semibold text-slate-500">8:00 AM - 5:00 PM</span>
             </div>
-            <h3 class="font-display font-black text-3xl text-slate-900 mb-1">Lecherías</h3>
-            <p class="text-emerald-800 font-bold text-base mb-3">Viernes, 20 de Noviembre</p>
-            <p class="text-xs text-slate-500 mb-6">08:00 a 19:00 hrs. Sede confirmada al formalizar inscripción.</p>
+            <h3 class="font-display font-extrabold text-2xl text-slate-900 mb-1">Lecherías</h3>
+            <p class="text-sm font-bold text-emerald-800 mb-3">Lunes 25 de Noviembre</p>
+            <p class="text-xs text-slate-600 mb-4"><strong>Lugar:</strong> Sede por confirmar (se notificará oportunamente a los inscritos).</p>
+            <ul class="text-xs text-slate-600 space-y-1.5 border-t border-slate-100 pt-3 mb-6">
+              <li>• Salón ejecutivo de entrenamiento</li>
+              <li>• Estación práctica de microscopía y Mindray</li>
+              <li>• Almuerzo y 2 coffee breaks</li>
+            </ul>
           </div>
-          <a href="https://wa.me/584248767342?text=%C2%A1Hola%20Lorena!%20Deseo%20apartar%20mi%20cupo%20con%20preventa%20para%20el%20Workshop%20en%20*Lecher%C3%ADas*%20(20%20Nov)." target="_blank" rel="noopener noreferrer" class="w-full text-center py-3.5 px-4 rounded-xl bg-emerald-800 hover:bg-emerald-700 text-white font-bold text-sm shadow-md transition-all">
-            Apartar Cupo en Lecherías
+          <a href="#registro" class="w-full text-center py-3 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-bold text-sm transition-all">
+            Inscribirme en Lecherías
           </a>
-        </div>
-      </div>
-
-      <div class="p-6 rounded-2xl bg-slate-900 text-white">
-        <h4 class="font-display font-bold text-lg text-emerald-400 mb-2">Dirigido a:</h4>
-        <p class="text-sm text-slate-300">
-          Médicos veterinarios clínicos, especialistas en medicina interna y cuidados intensivos, laboratoristas clínicos veterinarios, estudiantes de últimos semestres y egresados de Medicina Veterinaria interesados en fortalecer competencias en fisiopatología hemática y abordajes diagnósticos y terapéuticos.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Programa Completo -->
-  <section id="programa" class="py-16 md:py-20 bg-white border-b border-slate-200">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6">
-      <div class="text-center max-w-2xl mx-auto mb-12">
-        <span class="text-xs font-bold text-emerald-800 tracking-wider uppercase bg-emerald-100 px-3 py-1 rounded-full inline-block mb-3">
-          Cronograma Detallado
-        </span>
-        <h2 class="font-display font-extrabold text-2xl sm:text-3xl md:text-4xl text-slate-900 tracking-tight mb-4">
-          Programa del Workshop (08:00 a 19:00 hrs)
-        </h2>
-        <p class="text-slate-600 text-sm sm:text-base">
-          8 módulos intensivos más sesión práctica con equipos de hematología automatizada Mindray Animal Medical.
-        </p>
-      </div>
-
-      <div class="space-y-3">
-        <div class="p-4 rounded-xl bg-slate-50 border border-slate-200 text-sm">
-          <span class="font-bold text-slate-900">08:00 – 08:15</span> | <strong>Apertura</strong> – Bienvenida e introducción (Dr. Gilberto Sánchez, Biól. MVZ Pablo Morales O. / Lcda. Tatiana Rodríguez M.)
-        </div>
-        <div class="p-4 rounded-xl bg-slate-50 border border-slate-200 text-sm">
-          <span class="font-bold text-emerald-800">08:15 – 09:30</span> | <strong>Módulo 1:</strong> Eritropoyesis y fisiología eritrocitaria (Biól. MVZ Pablo Morales O. - 1h 15m)
-        </div>
-        <div class="p-4 rounded-xl bg-slate-50 border border-slate-200 text-sm">
-          <span class="font-bold text-emerald-800">09:30 – 11:00</span> | <strong>Módulo 2:</strong> Clasificación y abordaje diagnóstico de las principales anemias (Biól. MVZ Pablo Morales O. - 1h 30m)
-        </div>
-        <div class="p-3.5 rounded-xl bg-amber-50 border border-amber-200 text-xs font-semibold text-amber-900 flex justify-between">
-          <span>☕ 11:00 – 11:15 | Receso / Coffee Break (15 min)</span>
-          <span>Incluido</span>
-        </div>
-        <div class="p-4 rounded-xl bg-slate-50 border border-slate-200 text-sm">
-          <span class="font-bold text-emerald-800">11:15 – 12:15</span> | <strong>Módulo 3:</strong> Fisiología plaquetaria y trombopoyesis (Biól. MVZ Pablo Morales O. - 1h 00m)
-        </div>
-        <div class="p-4 rounded-xl bg-slate-50 border border-slate-200 text-sm">
-          <span class="font-bold text-emerald-800">12:15 – 13:30</span> | <strong>Módulo 4:</strong> Abordaje del paciente trombocitopénico y principales trombocitopatías (Biól. MVZ Pablo Morales O. - 1h 15m)
-        </div>
-        <div class="p-4 rounded-xl bg-emerald-100 border border-emerald-300 text-xs sm:text-sm font-bold text-emerald-950 flex justify-between">
-          <span>🍽️ 13:30 – 14:15 | Receso / Almuerzo Completo y Networking (45 min)</span>
-          <span class="bg-white px-2 py-0.5 rounded text-emerald-800">Incluido</span>
-        </div>
-        <div class="p-4 rounded-xl bg-slate-50 border border-slate-200 text-sm">
-          <span class="font-bold text-emerald-800">14:15 – 15:15</span> | <strong>Módulo 5:</strong> Fisiología leucocitaria y mielopoyesis (Biól. MVZ Pablo Morales O. - 1h 00m)
-        </div>
-        <div class="p-4 rounded-xl bg-slate-50 border border-slate-200 text-sm">
-          <span class="font-bold text-emerald-800">15:15 – 16:30</span> | <strong>Módulo 6:</strong> Abordaje de las alteraciones leucocitarias (Biól. MVZ Pablo Morales O. - 1h 15m)
-        </div>
-        <div class="p-3.5 rounded-xl bg-amber-50 border border-amber-200 text-xs font-semibold text-amber-900 flex justify-between">
-          <span>☕ 16:30 – 16:45 | Receso / Coffee Break (15 min)</span>
-          <span>Incluido</span>
-        </div>
-        <div class="p-4 rounded-xl bg-slate-50 border border-slate-200 text-sm">
-          <span class="font-bold text-emerald-800">16:45 – 17:30</span> | <strong>Módulo 7:</strong> Fisiología linfocitaria y linfopoyesis (Biól. MVZ Pablo Morales O. - 45 min)
-        </div>
-        <div class="p-4 rounded-xl bg-slate-50 border border-slate-200 text-sm">
-          <span class="font-bold text-emerald-800">17:30 – 18:30</span> | <strong>Módulo 8:</strong> Interpretación de los linfocitos en sangre circulante (Biól. MVZ Pablo Morales O. - 1h 00m)
-        </div>
-        <div class="p-5 rounded-xl bg-gradient-to-r from-slate-900 to-emerald-950 text-white border border-slate-800">
-          <span class="font-bold text-emerald-400">18:30 – 19:00</span> | <strong>Cierre Práctico:</strong> Casos clínicos, práctica con equipos de hematología Mindray Animal Medical, preguntas y cierre (Biól. MVZ Pablo Morales O. / Lcda. Tatiana Rodríguez M. - 30 min)
         </div>
       </div>
     </div>
   </section>
 
   <!-- Ponentes -->
-  <section id="ponentes" class="py-16 md:py-20 bg-slate-50 border-b border-slate-200">
+  <section id="ponentes" class="py-16 md:py-20 bg-white border-b border-slate-200">
     <div class="max-w-6xl mx-auto px-4 sm:px-6">
       <div class="text-center max-w-2xl mx-auto mb-12">
         <span class="text-xs font-bold text-emerald-800 tracking-wider uppercase bg-emerald-100 px-3 py-1 rounded-full inline-block mb-3">
-          Facilitadores
+          Facultad Académica Internacional
         </span>
         <h2 class="font-display font-extrabold text-2xl sm:text-3xl md:text-4xl text-slate-900 tracking-tight mb-4">
-          Ponentes Internacionales
+          Aprende con Especialistas de Referencia
         </h2>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
         <!-- Ponente 1 -->
-        <div class="bg-white rounded-2xl border border-slate-200 p-7 shadow-sm">
-          <div class="flex items-center gap-2 mb-2">
-            <span class="text-2xl">🇲🇽</span>
-            <span class="text-xs font-bold text-emerald-800 uppercase">México • Ponente Internacional</span>
+        <div class="bg-slate-50 rounded-2xl p-7 border border-slate-200 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center gap-2 mb-3">
+              <span class="text-xs font-bold text-emerald-800 uppercase bg-emerald-100 px-2.5 py-0.5 rounded">México • Ponente Magistral</span>
+            </div>
+            <h3 class="font-display font-bold text-2xl text-slate-900 mb-1">Dr. Andrés R. R.</h3>
+            <p class="text-xs font-bold text-slate-500 mb-3">MV • MVZ • M.Sc. • Ph.D.</p>
+            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed mb-4">
+              Médico Veterinario Zootecnista (Univ. de Caldas), Magíster en Ciencias Veterinarias y Doctor (Ph.D.) en Ciencias de la Producción y de la Salud Animal por la UNAM (México). Referente latinoamericano en patología clínica, hematología y oncología diagnóstica.
+            </p>
           </div>
-          <h3 class="font-display font-bold text-2xl text-slate-900 mb-1">Pablo Morales</h3>
-          <p class="text-xs font-bold text-slate-500 mb-3">Biól. MVZ EEHDL Dipl.</p>
-          <div class="inline-block px-3 py-1 rounded bg-emerald-100 text-emerald-900 text-xs font-bold mb-4">
-            Especialista en Hematología y Hemato-oncología Veterinaria
-          </div>
-          <p class="text-xs sm:text-sm text-slate-600 leading-relaxed mb-3">
-            Formado en el Instituto de Hematopatología y la UDG, el Dr. Morales cuenta con una sólida trayectoria médica enriquecida por estancias internacionales en Croacia, Costa Rica y España.
-          </p>
-          <p class="text-xs sm:text-sm text-slate-600 leading-relaxed mb-4">
-            Destaca por su compromiso con la divulgación científica, siendo autor de diversos casos clínicos publicados y ponente recurrente en congresos nacionales e internacionales. Miembro de la American Association of Veterinary Hematology & Transfusion Medicine (AVHTM) y del Colegio de Médicos Veterinarios en Pequeñas Especies.
-          </p>
         </div>
 
         <!-- Ponente 2 -->
-        <div class="bg-white rounded-2xl border border-slate-200 p-7 shadow-sm">
-          <div class="flex items-center gap-2 mb-2">
-            <span class="text-2xl">🇨🇴</span>
-            <span class="text-xs font-bold text-blue-700 uppercase">Colombia / LATAM • Especialista Mindray</span>
+        <div class="bg-slate-50 rounded-2xl p-7 border border-slate-200 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center gap-2 mb-3">
+              <span class="text-xs font-bold text-blue-800 uppercase bg-blue-100 px-2.5 py-0.5 rounded">Colombia • Especialista Mindray</span>
+            </div>
+            <h3 class="font-display font-bold text-2xl text-slate-900 mb-1">Tatiana Rodríguez Méndez</h3>
+            <p class="text-xs font-bold text-slate-500 mb-3">Lcda. Mgst. en Microbiología</p>
+            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed mb-4">
+              Bacterióloga y Laboratorista Clínica con énfasis en Diagnóstico Clínico Veterinario. Especialista de Aplicaciones LATAM para la línea de Diagnóstico In Vitro (IVD) de Mindray Animal Medical, liderando talleres de automatización en todo el continente.
+            </p>
           </div>
-          <h3 class="font-display font-bold text-2xl text-slate-900 mb-1">Tatiana Rodríguez Méndez</h3>
-          <p class="text-xs font-bold text-slate-500 mb-3">Lcda. Mgst. en Microbiología</p>
-          <div class="inline-block px-3 py-1 rounded bg-blue-100 text-blue-900 text-xs font-bold mb-4">
-            Especialista en Laboratorio Clínico Veterinario y Microbiología
-          </div>
-          <p class="text-xs sm:text-sm text-slate-600 leading-relaxed mb-3">
-            Formada como Bacterióloga y Laboratorista Clínica con énfasis en Diagnóstico Clínico Veterinario, la Lcda. Rodríguez cuenta con una Maestría en Microbiología y un Diplomado en Laboratorio Clínico de Pequeñas Especies.
-          </p>
-          <p class="text-xs sm:text-sm text-slate-600 leading-relaxed mb-4">
-            Destaca por su liderazgo técnico a nivel regional, desempeñándose como Especialista de Aplicaciones LATAM para la línea de Diagnóstico In Vitro de Mindray Animal Medical, impulsando la innovación tecnológica en el sector veterinario.
-          </p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Inversión -->
-  <section id="inversion" class="py-16 md:py-20 bg-white border-b border-slate-200">
+  <section id="inversion" class="py-16 md:py-20 bg-slate-50 border-b border-slate-200">
     <div class="max-w-4xl mx-auto px-4 sm:px-6">
       <div class="text-center max-w-2xl mx-auto mb-12">
         <span class="text-xs font-bold text-emerald-800 tracking-wider uppercase bg-emerald-100 px-3 py-1 rounded-full inline-block mb-3">
-          Tarifas
+          Tarifas e Inversión
         </span>
         <h2 class="font-display font-extrabold text-2xl sm:text-3xl md:text-4xl text-slate-900 tracking-tight mb-4">
-          Inversión del Workshop
+          Asegura el Precio Especial de Preventa
         </h2>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
         <!-- Preventa -->
-        <div class="bg-slate-50 rounded-2xl border-2 border-emerald-800 p-7 flex flex-col justify-between shadow-lg">
+        <div class="bg-white rounded-2xl border-2 border-emerald-800 p-7 flex flex-col justify-between shadow-lg relative">
+          <span class="absolute -top-3 right-6 bg-emerald-800 text-white text-[11px] font-bold px-3 py-0.5 rounded-full uppercase">
+            Más Elegida
+          </span>
           <div>
-            <span class="text-xs font-bold text-emerald-800 uppercase">Pronto Pago</span>
-            <h3 class="font-display font-bold text-2xl text-slate-900 mb-2">Antes del 30 de Octubre</h3>
+            <span class="text-xs font-bold text-emerald-800 uppercase">Preventa (Hasta 30 Octubre)</span>
             <div class="flex items-baseline gap-1 my-3">
               <span class="font-display font-black text-5xl text-slate-950">$160</span>
               <span class="text-sm font-semibold text-slate-500">USD</span>
             </div>
-            <p class="text-xs text-slate-500 mb-6">A tasa oficial BCV del día de la formalización.</p>
-            <ul class="space-y-2 text-sm text-slate-700 mb-8 border-t border-slate-200 pt-4">
+            <p class="text-xs text-slate-500 mb-6">A tasa oficial BCV del día de la transferencia o pago en divisas.</p>
+            <ul class="space-y-2 text-xs sm:text-sm text-slate-700 mb-8 border-t border-slate-100 pt-4">
               <li>✓ Coffee Break matutino y vespertino</li>
               <li>✓ Almuerzo completo incluido</li>
               <li>✓ Material académico y memorias</li>
@@ -425,22 +395,21 @@
               <li>✓ Práctica en analizadores Mindray</li>
             </ul>
           </div>
-          <a href="https://wa.me/584248767342?text=%C2%A1Hola%20Lorena!%20Quiero%20apartar%20con%20precio%20de%20preventa%20($160)%20para%20el%20Workshop%20de%20Hematolog%C3%ADa." target="_blank" rel="noopener noreferrer" class="w-full text-center py-4 rounded-xl bg-emerald-800 hover:bg-emerald-700 text-white font-bold text-base shadow-md transition-all">
-            Reservar Preventa ($160)
+          <a href="#registro" class="w-full text-center py-4 rounded-xl bg-emerald-800 hover:bg-emerald-700 text-white font-bold text-base shadow-md transition-all">
+            Inscribirme con Preventa ($160)
           </a>
         </div>
 
         <!-- Regular -->
-        <div class="bg-slate-50 rounded-2xl border border-slate-200 p-7 flex flex-col justify-between">
+        <div class="bg-white rounded-2xl border border-slate-200 p-7 flex flex-col justify-between">
           <div>
-            <span class="text-xs font-bold text-slate-500 uppercase">Precio Estándar</span>
-            <h3 class="font-display font-bold text-2xl text-slate-900 mb-2">Desde el 31 de Octubre</h3>
+            <span class="text-xs font-bold text-slate-500 uppercase">Precio Estándar (Desde 31 Octubre)</span>
             <div class="flex items-baseline gap-1 my-3">
               <span class="font-display font-black text-5xl text-slate-600">$190</span>
               <span class="text-sm font-semibold text-slate-500">USD</span>
             </div>
             <p class="text-xs text-slate-500 mb-6">A tasa oficial BCV del día.</p>
-            <ul class="space-y-2 text-sm text-slate-600 mb-8 border-t border-slate-200 pt-4">
+            <ul class="space-y-2 text-xs sm:text-sm text-slate-600 mb-8 border-t border-slate-100 pt-4">
               <li>✓ Coffee Break matutino y vespertino</li>
               <li>✓ Almuerzo completo incluido</li>
               <li>✓ Material académico y memorias</li>
@@ -448,10 +417,174 @@
               <li>✓ Práctica en analizadores Mindray</li>
             </ul>
           </div>
-          <a href="https://wa.me/584248767342?text=%C2%A1Hola%20Lorena!%20Deseo%20m%C3%A1s%20informaci%C3%B3n%20sobre%20el%20Workshop%20de%20Hematolog%C3%ADa." target="_blank" rel="noopener noreferrer" class="w-full text-center py-4 rounded-xl bg-white border border-slate-300 hover:bg-slate-100 text-slate-800 font-bold text-base transition-all">
-            Consultar Cupos
+          <a href="#registro" class="w-full text-center py-4 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-800 font-bold text-base transition-all">
+            Inscribirme
           </a>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FORMULARIO DE INSCRIPCIÓN (High Conversion Section) -->
+  <section id="registro" class="py-16 md:py-24 bg-gradient-to-b from-white to-emerald-50/50 border-b border-slate-200">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6">
+      <div class="text-center mb-10">
+        <span class="text-xs font-bold text-emerald-800 tracking-wider uppercase bg-emerald-100 px-3 py-1 rounded-full inline-block mb-3">
+          Registro Oficial
+        </span>
+        <h2 class="font-display font-extrabold text-3xl sm:text-4xl text-slate-900 tracking-tight mb-3">
+          Formulario de Inscripción
+        </h2>
+        <p class="text-slate-600 text-sm sm:text-base max-w-xl mx-auto">
+          Completa tus datos para registrar tu cupo en la base de datos oficial. Al enviar, serás redirigido a WhatsApp para confirmar los datos y gestionar tu método de pago con la asesora.
+        </p>
+      </div>
+
+      <!-- Card Container for Form -->
+      <div class="bg-white rounded-3xl p-6 sm:p-10 border border-slate-200 shadow-xl">
+        <form id="registroForm" class="space-y-5" method="POST" action="https://script.google.com/macros/s/AKfycbxTCxU-lLxkZTk7tqNrsyEUFSCwIkwyoVpNJ6bEfbMATgD9Xa0JEKTqZyEtit6FQlWn/exec">
+          
+          <!-- Sede del Workshop -->
+          <div>
+            <label for="Ciudad_Workshop" class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">
+              Selecciona tu Sede del Workshop *
+            </label>
+            <select
+              id="Ciudad_Workshop"
+              name="Ciudad_Workshop"
+              required
+              class="w-full px-4 py-3.5 rounded-xl border border-slate-300 focus:border-emerald-700 focus:ring-2 focus:ring-emerald-700/20 bg-slate-50 text-slate-900 text-sm font-semibold transition-all outline-none"
+            >
+              <option value="" disabled selected>Elige la ciudad donde asistirás...</option>
+              <option value="Caracas">Caracas - Jueves 21 de Noviembre (Sede por confirmar)</option>
+              <option value="Maracay">Maracay - Sábado 23 de Noviembre (Sede por confirmar)</option>
+              <option value="Lecherías">Lecherías - Lunes 25 de Noviembre (Sede por confirmar)</option>
+            </select>
+          </div>
+
+          <!-- Nombres y Apellidos -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label for="Nombres" class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">
+                Nombres *
+              </label>
+              <input
+                type="text"
+                id="Nombres"
+                name="Nombres"
+                required
+                placeholder="Ej. Carlos Eduardo"
+                class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:border-emerald-700 focus:ring-2 focus:ring-emerald-700/20 bg-slate-50 text-slate-900 text-sm transition-all outline-none"
+              >
+            </div>
+            <div>
+              <label for="Apellidos" class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">
+                Apellidos *
+              </label>
+              <input
+                type="text"
+                id="Apellidos"
+                name="Apellidos"
+                required
+                placeholder="Ej. Mendoza Silva"
+                class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:border-emerald-700 focus:ring-2 focus:ring-emerald-700/20 bg-slate-50 text-slate-900 text-sm transition-all outline-none"
+              >
+            </div>
+          </div>
+
+          <!-- Cédula y Correo -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label for="Cedula" class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">
+                Cédula / Identificación *
+              </label>
+              <input
+                type="text"
+                id="Cedula"
+                name="Cedula"
+                required
+                placeholder="Ej. V-18.452.123"
+                class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:border-emerald-700 focus:ring-2 focus:ring-emerald-700/20 bg-slate-50 text-slate-900 text-sm transition-all outline-none"
+              >
+            </div>
+            <div>
+              <label for="Correo" class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">
+                Correo Electrónico *
+              </label>
+              <input
+                type="email"
+                id="Correo"
+                name="Correo"
+                required
+                placeholder="tu.correo@ejemplo.com"
+                class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:border-emerald-700 focus:ring-2 focus:ring-emerald-700/20 bg-slate-50 text-slate-900 text-sm transition-all outline-none"
+              >
+            </div>
+          </div>
+
+          <!-- Ciudad y Estado del Participante -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label for="Ciudad" class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">
+                Ciudad de Residencia *
+              </label>
+              <input
+                type="text"
+                id="Ciudad"
+                name="Ciudad"
+                required
+                placeholder="Ej. Valencia / Caracas / Maracay"
+                class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:border-emerald-700 focus:ring-2 focus:ring-emerald-700/20 bg-slate-50 text-slate-900 text-sm transition-all outline-none"
+              >
+            </div>
+            <div>
+              <label for="Estado" class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">
+                Estado *
+              </label>
+              <input
+                type="text"
+                id="Estado"
+                name="Estado"
+                required
+                placeholder="Ej. Carabobo / Miranda / Aragua"
+                class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:border-emerald-700 focus:ring-2 focus:ring-emerald-700/20 bg-slate-50 text-slate-900 text-sm transition-all outline-none"
+              >
+            </div>
+          </div>
+
+          <!-- Clínica o Laboratorio -->
+          <div>
+            <label for="Clinica" class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">
+              Clínica Veterinaria o Laboratorio de Procedencia *
+            </label>
+            <input
+                type="text"
+                id="Clinica"
+                name="Clinica"
+                required
+                placeholder="Ej. Centro Veterinario Altamira / Independiente"
+                class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:border-emerald-700 focus:ring-2 focus:ring-emerald-700/20 bg-slate-50 text-slate-900 text-sm transition-all outline-none"
+              >
+          </div>
+
+          <!-- Notice -->
+          <div class="p-4 rounded-xl bg-emerald-50 border border-emerald-200 text-xs text-emerald-900 flex items-start gap-2.5">
+            <span class="text-base">📲</span>
+            <p>
+              <strong>Flujo automatizado:</strong> Al presionar el botón, tus datos se guardarán en la hoja de Google Sheets y serás transferido a WhatsApp con el mensaje listo para gestionar tu pago con nuestra asesora Lorena Fuentes.
+            </p>
+          </div>
+
+          <!-- Submit Button -->
+          <button
+            type="submit"
+            id="submit-btn"
+            class="w-full py-4 px-6 rounded-xl bg-emerald-800 hover:bg-emerald-700 text-white font-bold text-base sm:text-lg shadow-lg shadow-emerald-900/20 transition-all flex items-center justify-center gap-2 cursor-pointer"
+          >
+            <span>Confirmar Inscripción y Gestionar Pago</span>
+            <span>→</span>
+          </button>
+        </form>
       </div>
     </div>
   </section>
@@ -470,38 +603,88 @@
             </svg>
           </div>
           <p class="text-slate-400 text-sm max-w-md leading-relaxed mb-4">
-            Workshop: Abordaje Integral de las Alteraciones Hemáticas en Caninos y Felinos. Formación médica veterinaria de vanguardia en Venezuela.
+            Abordaje integral de las alteraciones hemáticas en caninos y felinos. Formación médica veterinaria de vanguardia en Venezuela.
           </p>
-          <p class="text-xs text-slate-500">Patrocinado por: Mindray Animal Medical y Mindvet Academy</p>
+          <p class="text-xs text-slate-500">En alianza con: Mindray Animal Medical y Mindvet Academy</p>
         </div>
 
         <div class="bg-slate-900 p-6 rounded-2xl border border-slate-800">
-          <span class="text-xs font-bold text-emerald-400 uppercase tracking-widest block mb-1">Contáctanos</span>
-          <h3 class="font-display font-bold text-xl text-white mb-2">Escribe a nuestra asesora: Lorena Fuentes</h3>
-          <p class="text-sm text-slate-300 mb-4">WhatsApp directo: <strong>+58 424-8767342</strong></p>
-          <a href="https://wa.me/584248767342?text=%C2%A1Hola%20Lorena!%20Vengo%20de%20la%20p%C3%A1gina%20web%20del%20Workshop%20de%20Hematolog%C3%ADa.%20Deseo%20reservar%20mi%20cupo." target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold text-sm shadow-md transition-all">
-            Chatear con Lorena Fuentes por WhatsApp
+          <span class="text-xs font-bold text-emerald-400 uppercase tracking-widest block mb-1">Asesoría Directa</span>
+          <h3 class="font-display font-bold text-xl text-white mb-2">Lorena Fuentes</h3>
+          <p class="text-sm text-slate-300 mb-4">WhatsApp: <strong>+58 424-8767342</strong></p>
+          <a href="https://wa.me/584248767342?text=Hola,%20deseo%20m%C3%A1s%20informaci%C3%B3n%20sobre%20el%20Workshop%20de%20Hematolog%C3%ADa%20Veterinaria." target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold text-sm shadow-md transition-all">
+            Chatear por WhatsApp
           </a>
         </div>
       </div>
 
       <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
         <p>© 2026 Innovett Animal Care. Todos los derechos reservados.</p>
-        <p>Caracas • Maracay • Lecherías • Noviembre</p>
+        <p>Caracas • Maracay • Lecherías • Noviembre 2026</p>
       </div>
     </div>
   </footer>
 
-  <!-- Floating Mobile WhatsApp Bar -->
+  <!-- Floating Mobile CTA Bar -->
   <div class="fixed bottom-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-t border-slate-200 p-3 sm:hidden shadow-lg flex items-center justify-between gap-3">
     <div>
       <p class="text-[10px] text-slate-500 font-bold uppercase">Preventa</p>
       <span class="font-display font-black text-xl text-slate-900">$160 USD</span>
     </div>
-    <a href="https://wa.me/584248767342?text=%C2%A1Hola%20Lorena!%20Deseo%20apartar%20mi%20cupo%20con%20preventa%20para%20el%20Workshop%20de%20Hematolog%C3%ADa." target="_blank" rel="noopener noreferrer" class="flex-1 py-2.5 px-4 rounded-xl bg-emerald-800 text-white font-bold text-sm text-center shadow-md">
-      Inscribirme por WhatsApp
+    <a href="#registro" class="flex-1 py-2.5 px-4 rounded-xl bg-emerald-800 text-white font-bold text-sm text-center shadow-md">
+      Inscribirme al Workshop
     </a>
   </div>
+
+  <!-- Script de Envío a Google Sheets y Redirección a WhatsApp -->
+  <script>
+    document.getElementById('registroForm').addEventListener('submit', function(e) {
+      e.preventDefault(); // Evita que la página recargue
+      
+      const form = e.target;
+      const formData = new FormData(form);
+      const btn = form.querySelector('button[type="submit"]');
+      
+      // Cambiamos el texto del botón para que la gente no le dé 20 veces
+      const textoOriginal = btn.innerHTML;
+      btn.innerHTML = 'Procesando...';
+      btn.disabled = true;
+
+      // Redirección a WhatsApp
+      function irAWhatsApp() {
+        const nombres = formData.get('Nombres') || '';
+        const apellidos = formData.get('Apellidos') || '';
+        const ciudadWorkshop = formData.get('Ciudad_Workshop') || '';
+        
+        // Número de WhatsApp oficial de Innovett (código de país + número, sin el "+")
+        const numeroWhatsApp = '584248767342'; 
+        
+        const mensaje = "Hola, soy " + nombres + " " + apellidos + ". Acabo de completar mi registro para el workshop en " + ciudadWorkshop + ". Quiero gestionar mi pago.";
+        const urlWhatsapp = "https://wa.me/" + numeroWhatsApp + "?text=" + encodeURIComponent(mensaje);
+        
+        window.location.href = urlWhatsapp; // Redirección automática
+      }
+
+      // 1. Mandamos los datos a Google Sheets
+      fetch('https://script.google.com/macros/s/AKfycbxTCxU-lLxkZTk7tqNrsyEUFSCwIkwyoVpNJ6bEfbMATgD9Xa0JEKTqZyEtit6FQlWn/exec', {
+        method: 'POST',
+        body: formData,
+        mode: 'no-cors'
+      })
+      .then(response => {
+        // 2. Armamos el mensaje y disparamos a WhatsApp
+        irAWhatsApp();
+      })
+      .catch(error => {
+        console.error('Error:', error);
+        // Respaldo para asegurar que el usuario complete su proceso de pago por WhatsApp
+        irAWhatsApp();
+      });
+
+      // Temporizador de respaldo por si la red presenta retrasos
+      setTimeout(irAWhatsApp, 2000);
+    });
+  </script>
 
 </body>
 </html>

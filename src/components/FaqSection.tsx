@@ -24,7 +24,7 @@ export const FaqSection: React.FC = () => {
     },
     {
       q: '¿Dónde se realizarán los workshops en cada ciudad?',
-      a: 'Los eventos se llevarán a cabo en hoteles o auditorios céntricos con salones de conferencias confortables y facilidades de estacionamiento en Caracas, Maracay y Lecherías. Al confirmar tu reserva o preventa se te enviará la dirección exacta y recomendaciones de llegada.',
+      a: 'Los eventos se llevarán a cabo en auditorios y salones de conferencias confortables y de fácil acceso con facilidades de estacionamiento en Caracas, Maracay y Lecherías. La locación exacta de cada ciudad será anunciada y confirmada a todos los inscritos con anticipación.',
     },
     {
       q: '¿Puedo transferir mi cupo si tengo un imprevisto?',

@@ -65,6 +65,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenCodeModal, selectedCity })
             <a href="#programa" className="hover:text-emerald-800 transition-colors">Temario</a>
             <a href="#ponentes" className="hover:text-emerald-800 transition-colors">Ponentes</a>
             <a href="#inversion" className="hover:text-emerald-800 transition-colors">Inversión</a>
+            <a href="#registro" className="text-emerald-800 font-bold hover:underline transition-all">Formulario</a>
           </nav>
 
           {/* Header Actions */}
