@@ -644,19 +644,22 @@
       const form = e.target;
       const formData = new FormData(form);
       const btn = form.querySelector('button[type="submit"]');
-      
-      // Cambiamos el texto del botón para que la gente no le dé 20 veces
       const textoOriginal = btn.innerHTML;
-      btn.innerHTML = 'Procesando...';
+      
+      btn.innerHTML = 'Procesando registro...';
       btn.disabled = true;
 
-      // Redirección a WhatsApp
+      const scriptURL = 'https://script.google.com/macros/s/AKfycbxTCxU-lLxkZTk7tqNrsyEUFSCwIkwyoVpNJ6bEfbMATgD9Xa0JEKTqZyEtit6FQlWn/exec';
+
+      // Convertimos los datos a texto puro (application/x-www-form-urlencoded) para que Google Apps Script llene la hoja correctamente
+      const params = new URLSearchParams(formData).toString();
+
       function irAWhatsApp() {
         const nombres = formData.get('Nombres') || '';
         const apellidos = formData.get('Apellidos') || '';
         const ciudadWorkshop = formData.get('Ciudad_Workshop') || '';
         
-        // Número de WhatsApp oficial de Innovett (código de país + número, sin el "+")
+        // Número de WhatsApp oficial de la asesora Lorena Fuentes (+58 424-8767342)
         const numeroWhatsApp = '584248767342'; 
         
         const mensaje = "Hola, soy " + nombres + " " + apellidos + ". Acabo de completar mi registro para el workshop en " + ciudadWorkshop + ". Quiero gestionar mi pago.";
@@ -665,19 +668,19 @@
         window.location.href = urlWhatsapp; // Redirección automática
       }
 
-      // 1. Mandamos los datos a Google Sheets
-      fetch('https://script.google.com/macros/s/AKfycbxTCxU-lLxkZTk7tqNrsyEUFSCwIkwyoVpNJ6bEfbMATgD9Xa0JEKTqZyEtit6FQlWn/exec', {
+      fetch(scriptURL, {
         method: 'POST',
-        body: formData,
-        mode: 'no-cors'
+        mode: 'no-cors',
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded',
+        },
+        body: params
       })
-      .then(response => {
-        // 2. Armamos el mensaje y disparamos a WhatsApp
+      .then(function() {
         irAWhatsApp();
       })
-      .catch(error => {
-        console.error('Error:', error);
-        // Respaldo para asegurar que el usuario complete su proceso de pago por WhatsApp
+      .catch(function(error) {
+        console.error('Error al registrar en Google Sheets:', error);
         irAWhatsApp();
       });
 

@@ -54,15 +54,16 @@ export const RegistrationSection: React.FC<RegistrationSectionProps> = ({
     const message = `Hola, soy ${nombres} ${apellidos}. Acabo de completar mi registro para el workshop en ${ciudadWorkshop}. Quiero gestionar mi pago.`;
     const whatsappUrl = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
 
-    const formPostData = new FormData();
-    formPostData.append('Nombres', formData.Nombres);
-    formPostData.append('Apellidos', formData.Apellidos);
-    formPostData.append('Cedula', formData.Cedula);
-    formPostData.append('Correo', formData.Correo);
-    formPostData.append('Ciudad', formData.Ciudad);
-    formPostData.append('Estado', formData.Estado);
-    formPostData.append('Clinica', formData.Clinica);
-    formPostData.append('Ciudad_Workshop', formData.Ciudad_Workshop);
+    const params = new URLSearchParams({
+      Nombres: formData.Nombres,
+      Apellidos: formData.Apellidos,
+      Cedula: formData.Cedula,
+      Correo: formData.Correo,
+      Ciudad: formData.Ciudad,
+      Estado: formData.Estado,
+      Clinica: formData.Clinica,
+      Ciudad_Workshop: formData.Ciudad_Workshop,
+    }).toString();
 
     let hasRedirected = false;
     const redirect = () => {
@@ -77,8 +78,11 @@ export const RegistrationSection: React.FC<RegistrationSectionProps> = ({
       'https://script.google.com/macros/s/AKfycbxTCxU-lLxkZTk7tqNrsyEUFSCwIkwyoVpNJ6bEfbMATgD9Xa0JEKTqZyEtit6FQlWn/exec',
       {
         method: 'POST',
-        body: formPostData,
         mode: 'no-cors',
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded',
+        },
+        body: params,
       }
     )
       .then(() => {
