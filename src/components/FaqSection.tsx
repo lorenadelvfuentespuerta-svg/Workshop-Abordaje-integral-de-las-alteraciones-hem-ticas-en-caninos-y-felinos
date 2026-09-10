@@ -12,23 +12,27 @@ export const FaqSection: React.FC = () => {
   const faqs: FaqItem[] = [
     {
       q: '¿Qué métodos de pago tienen habilitados?',
-      a: 'Aceptamos transferencias en Bolívares calculadas a la tasa oficial del Banco Central de Venezuela (BCV), Pago Móvil, depósitos en divisas, transferencias Zelle y efectivo. Puedes solicitar los datos bancarios exactos a través de nuestro WhatsApp.',
+      a: 'Aceptamos transferencias en bolívares (calculadas a la tasa oficial del BCV), Pago Móvil, depósitos en divisas, Zelle y efectivo. Puedes solicitar los datos bancarios exactos a través de nuestro WhatsApp.',
     },
     {
       q: '¿Cómo se llevará a cabo la práctica con los analizadores Mindray?',
-      a: 'Mindray Animal Medical y Mindvet Academy trasladarán equipos de hematología automatizada directamente al lugar del evento. Guiados por la especialista de aplicaciones LATAM y el especialista en hematología, los asistentes correlacionarán los resultados de los equipos, histogramas y alarmas con frotis sanguíneos reales.',
+      a: 'Innovett Animal Care trasladará equipos de hematología automatizada directamente al lugar del evento. Guiados por la especialista de aplicaciones LATAM y el especialista en hematología, los asistentes correlacionarán los resultados de los equipos, histogramas y alarmas con frotis sanguíneos reales.',
     },
     {
       q: '¿El certificado cuenta con aval oficial?',
-      a: 'Sí, recibirás un certificado avalado por Innovett Animal Care, Mindray Animal Medical y Mindvet Academy con el desglose de las 11 horas académicas cursadas, válido para tu currículum profesional.',
+      a: 'Sí, recibirás un certificado avalado por Innovett Animal Care, Mindray Animal Medical y Mindvet Academy. Incluye el desglose de las 11 horas académicas cursadas y es totalmente válido para tu currículum profesional.',
     },
     {
       q: '¿Dónde se realizarán los workshops en cada ciudad?',
-      a: 'Los eventos se llevarán a cabo en auditorios y salones de conferencias confortables y de fácil acceso con facilidades de estacionamiento en Caracas, Maracay y Lecherías. La locación exacta de cada ciudad será anunciada y confirmada a todos los inscritos con anticipación.',
+      a: 'Los eventos serán en Caracas, Maracay y Lechería, en auditorios y salones de conferencias confortables, de fácil acceso y con estacionamiento. Anunciaremos y confirmaremos la locación exacta a todos los inscritos con anticipación.',
     },
     {
       q: '¿Puedo transferir mi cupo si tengo un imprevisto?',
-      a: 'Sí, los cupos son transferibles notificando con al menos 48 horas de anticipación al equipo de coordinación para emitir el certificado a nombre del nuevo asistente.',
+      a: 'Sí, los cupos son transferibles si notificas al equipo de coordinación con al menos 48 horas de anticipación, para así poder emitir el certificado a nombre del nuevo asistente. Ten en cuenta que mantenemos una política de no reembolso.',
+    },
+    {
+      q: '¿Cuál es el código de vestimenta?',
+      a: 'El código es casual o casual sport. Te invitamos a llevar un suéter para tu mayor comodidad en el salón.',
     },
   ];
 

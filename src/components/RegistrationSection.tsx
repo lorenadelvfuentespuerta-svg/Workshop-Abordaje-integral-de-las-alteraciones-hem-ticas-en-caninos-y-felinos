@@ -51,19 +51,8 @@ export const RegistrationSection: React.FC<RegistrationSectionProps> = ({
     const ciudadWorkshop = formData.Ciudad_Workshop;
 
     const phone = '584248767342';
-    const message = `Hola, soy ${nombres} ${apellidos}. Acabo de completar mi registro para el workshop en ${ciudadWorkshop}. Quiero gestionar mi pago.`;
+    const message = `¡Hola! Soy ${nombres} ${apellidos}. Acabo de completar mi registro para el workshop de Innovett en ${ciudadWorkshop}. Quiero información para concretar mi pago.`;
     const whatsappUrl = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
-
-    const params = new URLSearchParams({
-      Nombres: formData.Nombres,
-      Apellidos: formData.Apellidos,
-      Cedula: formData.Cedula,
-      Correo: formData.Correo,
-      Ciudad: formData.Ciudad,
-      Estado: formData.Estado,
-      Clinica: formData.Clinica,
-      Ciudad_Workshop: formData.Ciudad_Workshop,
-    }).toString();
 
     let hasRedirected = false;
     const redirect = () => {
@@ -74,28 +63,56 @@ export const RegistrationSection: React.FC<RegistrationSectionProps> = ({
       }
     };
 
-    fetch(
-      'https://script.google.com/macros/s/AKfycbxDfBIS-oFT-gbjOiJVQ-fyOZDF94DABr2hHSEXX5NbAZTq6tp-zbBh0qe93VXfsXlN/exec',
-      {
-        method: 'POST',
-        mode: 'no-cors',
-        headers: {
-          'Content-Type': 'application/x-www-form-urlencoded',
-        },
-        body: params,
-      }
-    )
-      .then(() => {
-        redirect();
-      })
-      .catch((err) => {
-        console.error('Submission error:', err);
-        redirect();
-      });
+    const targetURL = 'https://script.google.com/macros/s/AKfycbxTCxU-lLxkZTk7tqNrsyEUFSCwIkwyoVpNJ6bEfbMATgD9Xa0JEKTqZyEtit6FQlWn/exec';
 
-    // Fallback safety timeout
+    // Obtener o crear el iframe invisible para forzar el envío a Google Sheets sin bloqueos
+    let iframe = document.getElementById('hidden_iframe') as HTMLIFrameElement | null;
+    if (!iframe) {
+      iframe = document.createElement('iframe');
+      iframe.name = 'hidden_iframe';
+      iframe.id = 'hidden_iframe';
+      iframe.style.display = 'none';
+      document.body.appendChild(iframe);
+    }
+
+    iframe.onload = () => {
+      redirect();
+    };
+
+    // Creamos un formulario dinámico que viaja a través del iframe invisible
+    const hiddenForm = document.createElement('form');
+    hiddenForm.action = targetURL;
+    hiddenForm.method = 'POST';
+    hiddenForm.target = 'hidden_iframe';
+
+    const entries: [string, string][] = [
+      ['Nombres', formData.Nombres],
+      ['Apellidos', formData.Apellidos],
+      ['Cedula', formData.Cedula],
+      ['Correo', formData.Correo],
+      ['Ciudad', formData.Ciudad],
+      ['Estado', formData.Estado],
+      ['Clinica', formData.Clinica],
+      ['Ciudad_Workshop', formData.Ciudad_Workshop],
+    ];
+
+    entries.forEach(([key, val]) => {
+      const input = document.createElement('input');
+      input.type = 'hidden';
+      input.name = key;
+      input.value = val;
+      hiddenForm.appendChild(input);
+    });
+
+    document.body.appendChild(hiddenForm);
+    hiddenForm.submit();
+
+    // Fallback de seguridad por si el navegador no dispara onload en iframe externo
     setTimeout(() => {
       redirect();
+      if (hiddenForm.parentNode) {
+        hiddenForm.parentNode.removeChild(hiddenForm);
+      }
     }, 1800);
   };
 
@@ -127,7 +144,7 @@ export const RegistrationSection: React.FC<RegistrationSectionProps> = ({
               </p>
               <a
                 href={`https://wa.me/584248767342?text=${encodeURIComponent(
-                  `Hola, soy ${formData.Nombres} ${formData.Apellidos}. Acabo de completar mi registro para el workshop en ${formData.Ciudad_Workshop}. Quiero gestionar mi pago.`
+                  `¡Hola! Soy ${formData.Nombres} ${formData.Apellidos}. Acabo de completar mi registro para el workshop de Innovett en ${formData.Ciudad_Workshop}. Quiero información para concretar mi pago.`
                 )}`}
                 className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-emerald-800 text-white font-bold text-sm shadow-md"
               >

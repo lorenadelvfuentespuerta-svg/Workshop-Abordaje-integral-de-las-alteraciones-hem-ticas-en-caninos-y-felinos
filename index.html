@@ -18,6 +18,41 @@
   <body class="bg-slate-50 text-slate-900 font-['Plus_Jakarta_Sans',sans-serif] antialiased">
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
-  </body>
+    <!-- Script para dificultar la inspección y ocultar el código -->
+  <script>
+    // Bloquear clic derecho
+    document.addEventListener('contextmenu', function(e) {
+      e.preventDefault();
+      try {
+        alert('Acción no permitida en este sitio.');
+      } catch (err) {
+        // En caso de restricciones en navegadores / iframes
+      }
+    });
+
+    // Bloquear atajos de teclado para inspeccionar (F12, Ctrl+U, Ctrl+Shift+I, etc.)
+    document.addEventListener('keydown', function(e) {
+      if (
+        e.keyCode === 123 || // F12
+        (e.ctrlKey && e.shiftKey && (e.keyCode === 73 || e.keyCode === 74 || e.keyCode === 67)) || // Ctrl+Shift+I / J / C
+        (e.ctrlKey && e.keyCode === 85) || // Ctrl+U
+        (e.ctrlKey && e.keyCode === 83)    // Ctrl+S
+      ) {
+        e.preventDefault();
+        return false;
+      }
+    });
+
+    // Desactivar selección de texto excepto en campos de entrada del formulario
+    document.onselectstart = function(e) {
+      e = e || window.event;
+      var target = e.target || e.srcElement;
+      if (target && (target.tagName === 'INPUT' || target.tagName === 'TEXTAREA' || target.isContentEditable)) {
+        return true;
+      }
+      return false;
+    };
+  </script>
+</body>
 </html>
 

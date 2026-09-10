@@ -200,7 +200,7 @@ export const WORKSHOP_INFO = {
       flag: "🇲🇽",
       title: "Especialista en Hematología y Hemato-oncología Veterinaria",
       role: "Biólogo, MVZ EEHDL Dipl.",
-      avatar: "https://i.postimg.cc/DfBbt2PR/pablo-png-para-web.png",
+      avatar: "https://i.postimg.cc/T1V5wDys/pablo-png-para-web.png",
       bio: [
         "Formado en el Instituto de Hematopatología y en la Universidad de Guadalajara (UDG).",
         "Cuenta con una sólida trayectoria médica enriquecida por estancias internacionales de especialización en Croacia, Costa Rica y España.",
@@ -221,7 +221,7 @@ export const WORKSHOP_INFO = {
       flag: "🇨🇴",
       title: "Especialista en Laboratorio Clínico Veterinario y Microbiología",
       role: "Bacterióloga, Magíster en Microbiología",
-      avatar: "https://i.postimg.cc/1tYsrYDK/TATIANA.png",
+      avatar: "https://i.postimg.cc/cHqJnJNd/TATIANA.png",
       bio: [
         "Formada como Bacterióloga y Laboratorista Clínica con énfasis en Diagnóstico Clínico Veterinario.",
         "Cuenta con Maestría en Microbiología y Diplomado en Laboratorio Clínico de Pequeñas Especies, lo que le otorga un profundo dominio analítico.",

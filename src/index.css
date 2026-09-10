@@ -1,1 +1,6 @@
 @import "tailwindcss";
+
+.bg-innovett { background-color: #2e7d32; }
+.text-innovett { color: #2e7d32; }
+.border-innovett { border-color: #2e7d32; }
+.hover-innovett:hover { background-color: #1b5e20; }
