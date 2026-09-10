@@ -24,23 +24,23 @@ export default function App() {
       {/* Portada Principal (Hero) */}
       <Hero selectedCity={selectedCity} onSelectCity={setSelectedCity} />
 
-      {/* Pilares del Workshop */}
+      {/* 3 Pilares Académicos */}
       <Pillars />
 
-      {/* Propuesta de Valor */}
+      {/* Propuesta de Valor y Práctica */}
       <ValueProposition />
 
-      {/* Temario y Módulos */}
+      {/* Temario y Cronograma */}
       <AgendaSection />
 
-      {/* Ponentes Internacionales y Especialistas */}
+      {/* Ponentes Internacionales */}
       <SpeakersSection />
 
-      {/* Sedes y Fechas por Ciudad */}
+      {/* Ciudades y Sedes */}
       <CitiesSection selectedCity={selectedCity} onSelectCity={setSelectedCity} />
 
-      {/* Tarifas e Inversión */}
-      <PricingSection selectedCity={selectedCity} />
+      {/* Tarifas y Beneficios */}
+      <PricingSection />
 
       {/* Formulario de Registro Oficial */}
       <RegistrationSection selectedCity={selectedCity} onSelectCity={setSelectedCity} />

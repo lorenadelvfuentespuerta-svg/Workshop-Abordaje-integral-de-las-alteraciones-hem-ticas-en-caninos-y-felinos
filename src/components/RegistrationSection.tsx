@@ -7,6 +7,24 @@ interface RegistrationSectionProps {
   onSelectCity: (cityId: string) => void;
 }
 
+// Google Form ID oficial: 1FAIpQLSfQRE5d0XywrILRl9l_DJG-8hhYOa4zgmfxVbTaJosJWCupNA
+const GOOGLE_FORM_ACTION =
+  'https://docs.google.com/forms/d/e/1FAIpQLSfQRE5d0XywrILRl9l_DJG-8hhYOa4zgmfxVbTaJosJWCupNA/formResponse';
+const BACKUP_SCRIPT_URL =
+  'https://script.google.com/macros/s/AKfycbxTCxU-lLxkZTk7tqNrsyEUFSCwIkwyoVpNJ6bEfbMATgD9Xa0JEKTqZyEtit6FQlWn/exec';
+
+// Mapeo exacto de los campos extraídos del Google Form
+const GOOGLE_FORM_ENTRIES = {
+  Nombres: 'entry.968290457',
+  Apellidos: 'entry.1955546545',
+  Cedula: 'entry.1752687897',
+  Correo: 'entry.671405124',
+  Telefono: 'entry.1144151808',
+  Ciudad: 'entry.1003990398',
+  Estado: 'entry.1499429720',
+  Ciudad_Workshop: 'entry.426561982',
+};
+
 export const RegistrationSection: React.FC<RegistrationSectionProps> = ({
   selectedCity,
   onSelectCity,
@@ -16,6 +34,7 @@ export const RegistrationSection: React.FC<RegistrationSectionProps> = ({
     Apellidos: '',
     Cedula: '',
     Correo: '',
+    Telefono: '',
     Ciudad: '',
     Estado: '',
     Clinica: '',
@@ -23,7 +42,7 @@ export const RegistrationSection: React.FC<RegistrationSectionProps> = ({
       selectedCity === 'maracay'
         ? 'Maracay'
         : selectedCity === 'lecherias'
-        ? 'Lecherías'
+        ? 'Lechería'
         : 'Caracas',
   });
 
@@ -37,7 +56,7 @@ export const RegistrationSection: React.FC<RegistrationSectionProps> = ({
     setFormData((prev) => ({ ...prev, [name]: value }));
     if (name === 'Ciudad_Workshop') {
       if (value === 'Maracay') onSelectCity('maracay');
-      else if (value === 'Lecherías') onSelectCity('lecherias');
+      else if (value === 'Lechería' || value === 'Lecherías') onSelectCity('lecherias');
       else onSelectCity('caracas');
     }
   };
@@ -49,10 +68,11 @@ export const RegistrationSection: React.FC<RegistrationSectionProps> = ({
     const nombres = formData.Nombres.trim();
     const apellidos = formData.Apellidos.trim();
     const ciudadWorkshop = formData.Ciudad_Workshop;
+    const telefono = formData.Telefono.trim();
 
-    const phone = '584248767342';
-    const message = `¡Hola! Soy ${nombres} ${apellidos}. Acabo de completar mi registro para el workshop de Innovett en ${ciudadWorkshop}. Quiero información para concretar mi pago.`;
-    const whatsappUrl = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+    const asesorWhatsApp = '584248767342';
+    const message = `¡Hola! Soy ${nombres} ${apellidos}. Acabo de completar mi registro para el workshop de Innovett en ${ciudadWorkshop}.\n\nCédula: ${formData.Cedula}\nTeléfono: ${telefono}\nCiudad: ${formData.Ciudad}\n\nQuiero coordinar la información de pago para asegurar mi cupo.`;
+    const whatsappUrl = `https://wa.me/${asesorWhatsApp}?text=${encodeURIComponent(message)}`;
 
     let hasRedirected = false;
     const redirect = () => {
@@ -63,14 +83,38 @@ export const RegistrationSection: React.FC<RegistrationSectionProps> = ({
       }
     };
 
-    const targetURL = 'https://script.google.com/macros/s/AKfycbxTCxU-lLxkZTk7tqNrsyEUFSCwIkwyoVpNJ6bEfbMATgD9Xa0JEKTqZyEtit6FQlWn/exec';
+    // 1. Preparar envío a Google Forms en segundo plano mediante fetch (no-cors)
+    try {
+      const gFormData = new URLSearchParams();
+      gFormData.append(GOOGLE_FORM_ENTRIES.Nombres, formData.Nombres);
+      gFormData.append(GOOGLE_FORM_ENTRIES.Apellidos, formData.Apellidos);
+      gFormData.append(GOOGLE_FORM_ENTRIES.Cedula, formData.Cedula);
+      gFormData.append(GOOGLE_FORM_ENTRIES.Correo, formData.Correo);
+      gFormData.append(GOOGLE_FORM_ENTRIES.Telefono, formData.Telefono);
+      gFormData.append(GOOGLE_FORM_ENTRIES.Ciudad, formData.Ciudad);
+      gFormData.append(GOOGLE_FORM_ENTRIES.Estado, formData.Estado);
+      gFormData.append(GOOGLE_FORM_ENTRIES.Ciudad_Workshop, formData.Ciudad_Workshop);
 
-    // Obtener o crear el iframe invisible para forzar el envío a Google Sheets sin bloqueos
-    let iframe = document.getElementById('hidden_iframe') as HTMLIFrameElement | null;
+      fetch(GOOGLE_FORM_ACTION, {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded',
+        },
+        body: gFormData.toString(),
+      }).catch(() => {
+        // Ignorar errores silenciosos de no-cors
+      });
+    } catch (err) {
+      console.warn('Error en fetch no-cors a Google Forms:', err);
+    }
+
+    // 2. Garantizar recepción en Google Forms mediante el form dinámico a iframe oculto
+    let iframe = document.getElementById('gform_hidden_iframe') as HTMLIFrameElement | null;
     if (!iframe) {
       iframe = document.createElement('iframe');
-      iframe.name = 'hidden_iframe';
-      iframe.id = 'hidden_iframe';
+      iframe.name = 'gform_hidden_iframe';
+      iframe.id = 'gform_hidden_iframe';
       iframe.style.display = 'none';
       document.body.appendChild(iframe);
     }
@@ -79,35 +123,54 @@ export const RegistrationSection: React.FC<RegistrationSectionProps> = ({
       redirect();
     };
 
-    // Creamos un formulario dinámico que viaja a través del iframe invisible
     const hiddenForm = document.createElement('form');
-    hiddenForm.action = targetURL;
+    hiddenForm.action = GOOGLE_FORM_ACTION;
     hiddenForm.method = 'POST';
-    hiddenForm.target = 'hidden_iframe';
+    hiddenForm.target = 'gform_hidden_iframe';
 
-    const entries: [string, string][] = [
-      ['Nombres', formData.Nombres],
-      ['Apellidos', formData.Apellidos],
-      ['Cedula', formData.Cedula],
-      ['Correo', formData.Correo],
-      ['Ciudad', formData.Ciudad],
-      ['Estado', formData.Estado],
-      ['Clinica', formData.Clinica],
-      ['Ciudad_Workshop', formData.Ciudad_Workshop],
+    const googleFormFields: [string, string][] = [
+      [GOOGLE_FORM_ENTRIES.Nombres, formData.Nombres],
+      [GOOGLE_FORM_ENTRIES.Apellidos, formData.Apellidos],
+      [GOOGLE_FORM_ENTRIES.Cedula, formData.Cedula],
+      [GOOGLE_FORM_ENTRIES.Correo, formData.Correo],
+      [GOOGLE_FORM_ENTRIES.Telefono, formData.Telefono],
+      [GOOGLE_FORM_ENTRIES.Ciudad, formData.Ciudad],
+      [GOOGLE_FORM_ENTRIES.Estado, formData.Estado],
+      [GOOGLE_FORM_ENTRIES.Ciudad_Workshop, formData.Ciudad_Workshop],
     ];
 
-    entries.forEach(([key, val]) => {
+    googleFormFields.forEach(([name, val]) => {
       const input = document.createElement('input');
       input.type = 'hidden';
-      input.name = key;
+      input.name = name;
       input.value = val;
       hiddenForm.appendChild(input);
     });
 
+    // También enviamos al script de respaldo en paralelo
+    try {
+      const backupData = new FormData();
+      backupData.append('Nombres', formData.Nombres);
+      backupData.append('Apellidos', formData.Apellidos);
+      backupData.append('Cedula', formData.Cedula);
+      backupData.append('Correo', formData.Correo);
+      backupData.append('Telefono', formData.Telefono);
+      backupData.append('Ciudad', formData.Ciudad);
+      backupData.append('Estado', formData.Estado);
+      backupData.append('Clinica', formData.Clinica);
+      backupData.append('Ciudad_Workshop', formData.Ciudad_Workshop);
+
+      fetch(BACKUP_SCRIPT_URL, {
+        method: 'POST',
+        mode: 'no-cors',
+        body: backupData,
+      }).catch(() => {});
+    } catch (_) {}
+
     document.body.appendChild(hiddenForm);
     hiddenForm.submit();
 
-    // Fallback de seguridad por si el navegador no dispara onload en iframe externo
+    // Redirección asegurada a WhatsApp en máximo 1.8s
     setTimeout(() => {
       redirect();
       if (hiddenForm.parentNode) {
@@ -215,14 +278,14 @@ export const RegistrationSection: React.FC<RegistrationSectionProps> = ({
                 </div>
               </div>
 
-              {/* Cedula y Correo */}
+              {/* Cedula y Telefono */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
                   <label
                     htmlFor="Cedula"
                     className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5"
                   >
-                    Cédula / Identificación *
+                    Cédula de Identidad *
                   </label>
                   <input
                     type="text"
@@ -235,6 +298,28 @@ export const RegistrationSection: React.FC<RegistrationSectionProps> = ({
                     className="w-full px-4 py-3 rounded-xl border border-slate-300 focus:border-emerald-700 focus:ring-2 focus:ring-emerald-700/20 bg-slate-50 text-slate-900 text-sm transition-all outline-none"
                   />
                 </div>
+                <div>
+                  <label
+                    htmlFor="Telefono"
+                    className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5"
+                  >
+                    Teléfono / WhatsApp *
+                  </label>
+                  <input
+                    type="tel"
+                    id="Telefono"
+                    name="Telefono"
+                    required
+                    value={formData.Telefono}
+                    onChange={handleChange}
+                    placeholder="Ej. +58 412 1234567"
+                    className="w-full px-4 py-3 rounded-xl border border-slate-300 focus:border-emerald-700 focus:ring-2 focus:ring-emerald-700/20 bg-slate-50 text-slate-900 text-sm transition-all outline-none"
+                  />
+                </div>
+              </div>
+
+              {/* Correo y Ciudad */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
                   <label
                     htmlFor="Correo"
@@ -253,10 +338,6 @@ export const RegistrationSection: React.FC<RegistrationSectionProps> = ({
                     className="w-full px-4 py-3 rounded-xl border border-slate-300 focus:border-emerald-700 focus:ring-2 focus:ring-emerald-700/20 bg-slate-50 text-slate-900 text-sm transition-all outline-none"
                   />
                 </div>
-              </div>
-
-              {/* Ciudad y Estado */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
                   <label
                     htmlFor="Ciudad"
@@ -271,10 +352,14 @@ export const RegistrationSection: React.FC<RegistrationSectionProps> = ({
                     required
                     value={formData.Ciudad}
                     onChange={handleChange}
-                    placeholder="Ej. Valencia / Caracas / Maracay"
+                    placeholder="Ej. Caracas / Valencia / Maracay"
                     className="w-full px-4 py-3 rounded-xl border border-slate-300 focus:border-emerald-700 focus:ring-2 focus:ring-emerald-700/20 bg-slate-50 text-slate-900 text-sm transition-all outline-none"
                   />
                 </div>
+              </div>
+
+              {/* Estado y Clinica */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
                   <label
                     htmlFor="Estado"
@@ -289,37 +374,35 @@ export const RegistrationSection: React.FC<RegistrationSectionProps> = ({
                     required
                     value={formData.Estado}
                     onChange={handleChange}
-                    placeholder="Ej. Carabobo / Miranda / Aragua"
+                    placeholder="Ej. Miranda / Aragua / Carabobo"
+                    className="w-full px-4 py-3 rounded-xl border border-slate-300 focus:border-emerald-700 focus:ring-2 focus:ring-emerald-700/20 bg-slate-50 text-slate-900 text-sm transition-all outline-none"
+                  />
+                </div>
+                <div>
+                  <label
+                    htmlFor="Clinica"
+                    className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5"
+                  >
+                    Clínica / Empresa *
+                  </label>
+                  <input
+                    type="text"
+                    id="Clinica"
+                    name="Clinica"
+                    required
+                    value={formData.Clinica}
+                    onChange={handleChange}
+                    placeholder="Ej. Centro Vet / Laboratorio"
                     className="w-full px-4 py-3 rounded-xl border border-slate-300 focus:border-emerald-700 focus:ring-2 focus:ring-emerald-700/20 bg-slate-50 text-slate-900 text-sm transition-all outline-none"
                   />
                 </div>
               </div>
 
-              {/* Clinica */}
-              <div>
-                <label
-                  htmlFor="Clinica"
-                  className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5"
-                >
-                  Clínica Veterinaria o Laboratorio de Procedencia *
-                </label>
-                <input
-                  type="text"
-                  id="Clinica"
-                  name="Clinica"
-                  required
-                  value={formData.Clinica}
-                  onChange={handleChange}
-                  placeholder="Ej. Centro Veterinario Altamira / Práctica Independiente"
-                  className="w-full px-4 py-3 rounded-xl border border-slate-300 focus:border-emerald-700 focus:ring-2 focus:ring-emerald-700/20 bg-slate-50 text-slate-900 text-sm transition-all outline-none"
-                />
-              </div>
-
               {/* Notice */}
               <div className="p-4 rounded-xl bg-emerald-50 border border-emerald-200 text-xs text-emerald-900 flex items-start gap-2.5">
-                <span className="text-base">📲</span>
+                <span className="text-base">📋</span>
                 <p>
-                  <strong>Flujo automatizado:</strong> Al presionar el botón, tus datos se guardarán en la hoja de Google Sheets y serás transferido a WhatsApp con el mensaje listo para gestionar tu pago con nuestra asesora Lorena Fuentes.
+                  <strong>Sincronización en vivo:</strong> Al enviar el formulario, tus respuestas quedarán registradas de inmediato en el <strong>Google Form y base de datos oficial</strong> del workshop, y se abrirá WhatsApp con tus datos listos para coordinar el pago.
                 </p>
               </div>
 
@@ -333,15 +416,29 @@ export const RegistrationSection: React.FC<RegistrationSectionProps> = ({
                 {isSubmitting ? (
                   <>
                     <Loader2 className="w-5 h-5 animate-spin" />
-                    <span>Guardando datos y redirigiendo a WhatsApp...</span>
+                    <span>Guardando en Google Forms y redirigiendo...</span>
                   </>
                 ) : (
                   <>
-                    <span>Confirmar Inscripción y Gestionar Pago</span>
+                    <span>Completar Inscripción y Pagar</span>
                     <Send className="w-4 h-4" />
                   </>
                 )}
               </button>
+
+              <div className="text-center pt-2">
+                <p className="text-xs text-slate-500">
+                  ¿Prefieres llenar el formulario directamente en Google?{' '}
+                  <a
+                    href="https://docs.google.com/forms/d/e/1FAIpQLSfQRE5d0XywrILRl9l_DJG-8hhYOa4zgmfxVbTaJosJWCupNA/viewform"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-emerald-700 font-semibold underline hover:text-emerald-800"
+                  >
+                    Abrir en Google Forms
+                  </a>
+                </p>
+              </div>
             </form>
           )}
         </div>
