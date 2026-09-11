@@ -16,7 +16,7 @@ export const ContactFooter: React.FC<ContactFooterProps> = ({ selectedCity }) =>
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     const cityText = WORKSHOP_INFO.cities.find(c => c.id === city)?.city || city;
-    const msg = `¡Hola Lorena! Mi nombre es ${name || 'Colega Veterinario'}${clinic ? ` de la clínica/consultorio ${clinic}` : ''}. Me interesa inscribirme con la tarifa de preventa ($160) en la sede de *${cityText}*. ¿Me envías los datos para formalizar mi cupo?`;
+    const msg = `¡Hola Lorena! Mi nombre es ${name || 'Colega Veterinario'}${clinic ? ` de la clínica/consultorio ${clinic}` : ''}. Me interesa inscribirme con la tarifa de preventa ($120) en la sede de *${cityText}*. ¿Me envías los datos para formalizar mi cupo?`;
     const url = `https://wa.me/${WORKSHOP_INFO.advisor.whatsappNumber}?text=${encodeURIComponent(msg)}`;
     window.open(url, '_blank');
     setSubmitted(true);
@@ -78,7 +78,7 @@ export const ContactFooter: React.FC<ContactFooterProps> = ({ selectedCity }) =>
                 Solicita tu inscripción directa
               </h3>
               <p className="text-xs sm:text-sm text-slate-300 mb-6">
-                Completa tus datos para enviarte un mensaje prearmado a WhatsApp y apartar tu puesto de inmediato con el descuento de preventa ($160).
+                Completa tus datos para enviarte un mensaje prearmado a WhatsApp y apartar tu puesto de inmediato con el descuento de preventa ($120).
               </p>
 
               <form onSubmit={handleSubmit} className="space-y-4">

@@ -65,7 +65,10 @@ export const CitiesSection: React.FC<CitiesSectionProps> = ({ selectedCity, onSe
                 <div>
                   <div className="flex items-baseline justify-between mb-3 text-xs text-slate-500">
                     <span>Preventa (hasta 30 Oct):</span>
-                    <strong className="text-slate-900 text-sm">$160 USD</strong>
+                    <div className="flex items-center gap-1.5">
+                      <span className="line-through text-slate-400 text-xs">$160</span>
+                      <strong className="text-emerald-700 font-bold text-sm">$120 USD</strong>
+                    </div>
                   </div>
 
                   <a

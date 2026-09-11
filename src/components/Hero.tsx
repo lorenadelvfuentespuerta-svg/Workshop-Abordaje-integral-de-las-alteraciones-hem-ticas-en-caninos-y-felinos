@@ -97,7 +97,7 @@ export const Hero: React.FC<HeroProps> = ({ selectedCity, onSelectCity }) => {
               href="#registro"
               className="inline-flex items-center justify-center gap-2.5 px-7 py-4 rounded-xl bg-emerald-800 hover:bg-emerald-700 text-white font-bold text-base shadow-lg shadow-emerald-800/25 transition-all hover:translate-y-[-1px] active:translate-y-[1px]"
             >
-              <span>Formulario de Inscripción en {currentCityObj.city} ($160)</span>
+              <span>Formulario de Inscripción en {currentCityObj.city} ($120)</span>
               <ArrowRight className="w-4 h-4" />
             </a>
 

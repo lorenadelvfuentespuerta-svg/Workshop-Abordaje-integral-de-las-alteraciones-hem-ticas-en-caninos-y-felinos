@@ -30,7 +30,7 @@ export interface CityEvent {
 
 export const WORKSHOP_INFO = {
   name: "Abordaje integral de las alteraciones hemáticas en caninos y felinos",
-  badge: "Workshop Presencial Teórico - Práctico",
+  badge: "Workshop",
   organizer: "Innovett Animal Care",
   sponsors: ["Mindray Animal Medical", "Mindvet Academy"],
   advisor: {
@@ -39,9 +39,9 @@ export const WORKSHOP_INFO = {
     whatsappNumber: "584248767342",
   },
   pricing: {
-    earlyBirdPrice: 160,
+    earlyBirdPrice: 120,
     earlyBirdDeadline: "30 de Octubre",
-    regularPrice: 190,
+    regularPrice: 160,
     regularFrom: "31 de Octubre",
     currency: "USD",
     rateNote: "Aceptado a tasa oficial BCV",
@@ -242,7 +242,7 @@ export function getWhatsAppLink(city?: string): string {
   const base = `https://wa.me/${WORKSHOP_INFO.advisor.whatsappNumber}`;
   const cityText = city ? ` en la ciudad de *${city}*` : "";
   const message = encodeURIComponent(
-    `¡Hola Lorena! Vengo de la página web del Workshop de Hematología Veterinaria (Innovett). Me interesa apartar mi cupo con la tarifa de preventa ($160)${cityText}. ¿Me podrías indicar los datos para realizar la reserva?`
+    `¡Hola Lorena! Vengo de la página web del Workshop de Hematología Veterinaria (Innovett). Me interesa apartar mi cupo con la tarifa de preventa ($120)${cityText}. ¿Me podrías indicar los datos para realizar la reserva?`
   );
   return `${base}?text=${message}`;
 }

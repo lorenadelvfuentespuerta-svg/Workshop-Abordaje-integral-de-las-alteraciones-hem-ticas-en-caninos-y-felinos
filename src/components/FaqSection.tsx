@@ -15,6 +15,10 @@ export const FaqSection: React.FC = () => {
       a: 'Aceptamos transferencias en bolívares (calculadas a la tasa oficial del BCV), Pago Móvil, depósitos en divisas, Zelle y efectivo. Puedes solicitar los datos bancarios exactos a través de nuestro WhatsApp.',
     },
     {
+      q: '¿Tienen planes de financiamiento?',
+      a: 'Sí, contamos con planes de financiamiento para facilitar tu participación. Sin embargo, ten en cuenta que al optar por financiamiento en cuotas se pierde el precio especial de preventa, aplicando la tarifa regular de $160 USD. Puedes consultar las condiciones y cronograma de cuotas escribiéndonos a nuestro WhatsApp.',
+    },
+    {
       q: '¿Cómo se llevará a cabo la práctica con los analizadores Mindray?',
       a: 'Innovett Animal Care trasladará equipos de hematología automatizada directamente al lugar del evento. Guiados por la especialista de aplicaciones LATAM y el especialista en hematología, los asistentes correlacionarán los resultados de los equipos, histogramas y alarmas con frotis sanguíneos reales.',
     },

@@ -18,7 +18,7 @@ export const Navbar: React.FC<NavbarProps> = ({ selectedCity }) => {
               ⚡ Preventa Activa
             </span>
             <span className="text-slate-200">
-              Asegura tu cupo con tarifa especial de <strong className="text-emerald-400 font-bold">$160</strong> antes del <strong>30 de Octubre</strong> (Ahorras $30).
+              Asegura tu cupo en preventa por <strong className="text-emerald-400 font-bold">$120</strong> antes del <strong>30 de Octubre</strong> (Precio inicial <span className="line-through text-slate-400">$160</span> • Ahorras $40).
             </span>
           </div>
 
