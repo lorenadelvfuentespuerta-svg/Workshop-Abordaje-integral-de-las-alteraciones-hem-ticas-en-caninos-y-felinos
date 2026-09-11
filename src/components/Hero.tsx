@@ -25,7 +25,7 @@ export const Hero: React.FC<HeroProps> = ({ selectedCity, onSelectCity }) => {
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-500 opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-600"></span>
             </span>
-            {WORKSHOP_INFO.badge}
+            {WORKSHOP_INFO.badge} • Actualización Profesional
           </span>
 
           <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-semibold bg-white text-slate-700 border border-slate-200 shadow-sm">
@@ -33,8 +33,9 @@ export const Hero: React.FC<HeroProps> = ({ selectedCity, onSelectCity }) => {
             Caracas • Maracay • Lecherías
           </span>
 
-          <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-semibold bg-red-50 text-rose-800 border border-rose-200 shadow-sm">
-            Patrocinado por Mindray Animal Medical
+          <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-semibold bg-slate-100 text-slate-800 border border-slate-300 shadow-sm">
+            <ShieldCheck className="w-3.5 h-3.5 text-emerald-700" />
+            Con el respaldo institucional y tecnológico de Mindray Animal Care y Midvet Care
           </span>
         </div>
 
@@ -49,8 +50,9 @@ export const Hero: React.FC<HeroProps> = ({ selectedCity, onSelectCity }) => {
           </h1>
 
           <p className="text-base sm:text-lg md:text-xl text-slate-600 font-normal leading-relaxed mb-8">
-            Transforma el hemograma en tu herramienta diagnóstica más certera. Aprende a clasificar 
-            anemias y trombocitopenias con criterio de vanguardia y realiza <strong>práctica directa sobre analizadores automatizados Mindray</strong> con especialistas de México y Colombia.
+            Taller intensivo de actualización profesional y educación continua. Desarrolla un criterio diagnóstico
+            sistemático para clasificar anemias, trombocitopatías y serie blanca, integrando la lectura de frotis
+            con el manejo e interpretación de <strong>tecnología hematológica automatizada</strong> junto a especialistas de México y Colombia.
           </p>
 
           {/* City Quick Picker in Hero */}
@@ -119,8 +121,8 @@ export const Hero: React.FC<HeroProps> = ({ selectedCity, onSelectCity }) => {
                 <Microscope className="w-4 h-4" />
               </div>
               <div>
-                <p className="font-['Outfit',sans-serif] font-bold text-slate-900 text-sm">Práctica Real</p>
-                <p className="text-xs text-slate-500">Con analizadores Mindray</p>
+                <p className="font-['Outfit',sans-serif] font-bold text-slate-900 text-sm">Práctica con Equipos</p>
+                <p className="text-xs text-slate-500">Manejo de instrumentación</p>
               </div>
             </div>
 
@@ -130,7 +132,7 @@ export const Hero: React.FC<HeroProps> = ({ selectedCity, onSelectCity }) => {
               </div>
               <div>
                 <p className="font-['Outfit',sans-serif] font-bold text-slate-900 text-sm">11 Horas</p>
-                <p className="text-xs text-slate-500">Jornada 08:00 a 19:00</p>
+                <p className="text-xs text-slate-500">Educación Continua</p>
               </div>
             </div>
 
@@ -139,8 +141,8 @@ export const Hero: React.FC<HeroProps> = ({ selectedCity, onSelectCity }) => {
                 <Award className="w-4 h-4" />
               </div>
               <div>
-                <p className="font-['Outfit',sans-serif] font-bold text-slate-900 text-sm">Certificado</p>
-                <p className="text-xs text-slate-500">Innovett & Mindray</p>
+                <p className="font-['Outfit',sans-serif] font-bold text-slate-900 text-sm">Certificado Oficial</p>
+                <p className="text-xs text-slate-500">Con aval institucional</p>
               </div>
             </div>
 

@@ -19,12 +19,12 @@ export const FaqSection: React.FC = () => {
       a: 'Sí, contamos con planes de financiamiento para facilitar tu participación. Sin embargo, ten en cuenta que al optar por financiamiento en cuotas se pierde el precio especial de preventa, aplicando la tarifa regular de $160 USD. Puedes consultar las condiciones y cronograma de cuotas escribiéndonos a nuestro WhatsApp.',
     },
     {
-      q: '¿Cómo se llevará a cabo la práctica con los analizadores Mindray?',
-      a: 'Innovett Animal Care trasladará equipos de hematología automatizada directamente al lugar del evento. Guiados por la especialista de aplicaciones LATAM y el especialista en hematología, los asistentes correlacionarán los resultados de los equipos, histogramas y alarmas con frotis sanguíneos reales.',
+      q: '¿Cómo se llevará a cabo la demostración y procesamiento de muestras en equipos?',
+      a: 'Se dispondrá de tecnología hematológica automatizada directamente en cada sede. Guiados por los especialistas de México y Colombia, los participantes correlacionarán en tiempo real los reportes analíticos, alarmas e histogramas con la observación microscópica de frotis sanguíneos.',
     },
     {
       q: '¿El certificado cuenta con aval oficial?',
-      a: 'Sí, recibirás un certificado avalado por Innovett Animal Care, Mindray Animal Medical y Mindvet Academy. Incluye el desglose de las 11 horas académicas cursadas y es totalmente válido para tu currículum profesional.',
+      a: 'Sí, recibirás un certificado de educación continua avalado por Innovett Animal Care, con el respaldo institucional y tecnológico de Mindray Animal Care y Midvet Care. Incluye el desglose de las 11 horas académicas cursadas y es totalmente válido para tu currículum profesional.',
     },
     {
       q: '¿Dónde se realizarán los workshops en cada ciudad?',

@@ -115,7 +115,7 @@ export const PricingSection: React.FC<PricingSectionProps> = ({ selectedCity }) 
         {/* Guarantee / Transparency Note */}
         <div className="max-w-2xl mx-auto p-4 rounded-xl bg-emerald-50 border border-emerald-200 text-center text-xs text-emerald-900 flex items-center justify-center gap-2">
           <ShieldCheck className="w-4 h-4 text-emerald-700 shrink-0" />
-          <span>Cupos estrictamente limitados por sede para garantizar la práctica intensiva y personalizada en cada equipo Mindray.</span>
+          <span>Cupos estrictamente limitados por sede para garantizar la práctica intensiva y personalizada con instrumentación de laboratorio y analizadores automatizados.</span>
         </div>
 
       </div>

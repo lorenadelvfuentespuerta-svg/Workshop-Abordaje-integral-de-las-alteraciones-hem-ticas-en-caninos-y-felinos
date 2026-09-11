@@ -63,8 +63,8 @@ export const ContactFooter: React.FC<ContactFooterProps> = ({ selectedCity }) =>
             </div>
 
             <div className="text-xs text-slate-500">
-              <p className="font-semibold text-slate-400 mb-1">Patrocinadores Oficiales:</p>
-              <p>Mindray Animal Medical • Mindvet Academy</p>
+              <p className="font-semibold text-slate-400 mb-1">Organización y Aval:</p>
+              <p>Innovett Animal Care • Actualización Profesional y Educación Continua</p>
             </div>
           </div>
 

@@ -47,7 +47,7 @@ export const ValueProposition: React.FC = () => {
               <div className="flex items-start gap-3 p-3.5 rounded-xl bg-slate-50 border border-slate-200">
                 <CheckCircle className="w-5 h-5 text-emerald-600 shrink-0 mt-0.5" />
                 <p className="text-sm text-slate-700">
-                  <strong>Práctica directa sobre equipos automatizados:</strong> Aprende a correlacionar frotis de sangre periférica con las alarmas, histogramas y gráficos de dispersión de Mindray Animal Medical.
+                  <strong>Demostración y procesamiento de muestras en equipos:</strong> Aprende a correlacionar frotis de sangre periférica con las alarmas, histogramas y gráficos de dispersión de analizadores automatizados.
                 </p>
               </div>
             </div>
@@ -65,13 +65,13 @@ export const ValueProposition: React.FC = () => {
                 Elevando el estándar del gremio veterinario venezolano
               </h3>
               <p className="text-slate-300 text-sm leading-relaxed mb-6">
-                Fortalecer estas competencias responde a una necesidad real de actualización profesional, acercando formación de alto nivel dictada por especialistas internacionales a <strong>Caracas, Maracay y Lecherías</strong>.
+                Fortalecer estas competencias responde a una necesidad real de actualización profesional y educación continua, acercando formación de alto rigor dictada por especialistas internacionales a <strong>Caracas, Maracay y Lecherías</strong>.
               </p>
 
               <div className="border-t border-slate-800 pt-5 space-y-3 mb-6">
                 <div className="flex items-center justify-between text-xs text-slate-300">
                   <span>Aval Oficial:</span>
-                  <strong className="text-white">Innovett & Mindray Academy</strong>
+                  <strong className="text-white">Innovett, Mindray Animal Care & Midvet Care</strong>
                 </div>
                 <div className="flex items-center justify-between text-xs text-slate-300">
                   <span>Carga Académica:</span>
@@ -79,7 +79,7 @@ export const ValueProposition: React.FC = () => {
                 </div>
                 <div className="flex items-center justify-between text-xs text-slate-300">
                   <span>Metodología:</span>
-                  <strong className="text-white">Casos Reales + Equipos en Vivo</strong>
+                  <strong className="text-white">Casos Reales + Procesamiento en Equipos</strong>
                 </div>
               </div>
 

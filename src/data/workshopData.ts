@@ -32,7 +32,7 @@ export const WORKSHOP_INFO = {
   name: "Abordaje integral de las alteraciones hemáticas en caninos y felinos",
   badge: "Workshop",
   organizer: "Innovett Animal Care",
-  sponsors: ["Mindray Animal Medical", "Mindvet Academy"],
+  sponsors: ["Mindray Animal Care", "Midvet Care"],
   advisor: {
     name: "Lorena Fuentes",
     phone: "+58 424-8767342",
@@ -46,12 +46,12 @@ export const WORKSHOP_INFO = {
     currency: "USD",
     rateNote: "Aceptado a tasa oficial BCV",
     includes: [
-      "Jornada intensiva completa (08:00 a 19:00 hrs)",
-      "Práctica real guiada con equipos de hematología Mindray Animal Medical",
+      "Jornada académica intensiva (08:00 a 19:00 hrs)",
+      "Manejo práctico de instrumentación del laboratorio y correlación celular",
       "Coffee Break matutino y vespertino",
       "Almuerzo completo incluido",
-      "Material académico exclusivo y memorias",
-      "Certificado oficial con respaldo internacional",
+      "Material didáctico exclusivo y memorias académicas",
+      "Certificado de educación continua con aval institucional",
     ],
   },
   cities: [
@@ -186,10 +186,10 @@ export const WORKSHOP_INFO = {
     {
       time: "18:30 – 19:00",
       module: "Cierre Práctico",
-      title: "Casos clínicos, práctica con equipos Mindray y ronda de preguntas",
+      title: "Casos clínicos, demostración y procesamiento de muestras en equipos y ronda de preguntas",
       speaker: "Biól. MVZ Pablo Morales O. / Lcda. Tatiana Rodríguez M.",
       duration: "30 min",
-      description: "Resolución interactiva de casos clínicos reales, aplicación con tecnología hematológica automatizada Mindray Animal Medical y entrega de certificados.",
+      description: "Resolución interactiva de casos clínicos reales, práctica presencial con equipos y tecnología hematológica automatizada, sesión de preguntas y entrega de certificados.",
     },
   ] as ModuleItem[],
   speakers: [
@@ -225,11 +225,11 @@ export const WORKSHOP_INFO = {
       bio: [
         "Formada como Bacterióloga y Laboratorista Clínica con énfasis en Diagnóstico Clínico Veterinario.",
         "Cuenta con Maestría en Microbiología y Diplomado en Laboratorio Clínico de Pequeñas Especies, lo que le otorga un profundo dominio analítico.",
-        "Líder técnica regional como Especialista de Aplicaciones LATAM para la línea de Diagnóstico In Vitro de Mindray Animal Medical.",
-        "Experta en optimización de tecnología automatizada y correlación celular en frotis sanguíneos.",
+        "Especialista de Aplicaciones para la línea de Diagnóstico In Vitro y Hematología Veterinaria Automatizada a nivel regional.",
+        "Experta en optimización de tecnología hematológica automatizada y correlación celular en frotis sanguíneos.",
       ],
       highlights: [
-        "Especialista Mindray Animal Medical LATAM",
+        "Especialista de Aplicaciones LATAM",
         "Magíster en Microbiología",
         "Diplomada en Pequeñas Especies",
         "Liderazgo en diagnóstico in vitro",

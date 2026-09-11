@@ -20,7 +20,7 @@ export const CitiesSection: React.FC<CitiesSectionProps> = ({ selectedCity, onSe
             3 Ciudades, Fechas Confirmadas
           </h2>
           <p className="text-slate-600 text-sm sm:text-base">
-            Reserva tu lugar en la ciudad de tu preferencia. Los cupos son estrictamente limitados para asegurar la práctica con los analizadores.
+            Reserva tu lugar en la sede de tu preferencia. Cupos limitados para garantizar el manejo práctico de instrumentación del laboratorio y la dinámica presencial.
           </p>
         </div>
 

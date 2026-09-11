@@ -80,38 +80,12 @@ export const SpeakersSection: React.FC = () => {
               <div className="border-t border-slate-200 pt-4 flex items-center justify-between text-xs text-slate-500 font-medium mt-auto">
                 <span className="flex items-center gap-1.5">
                   <Globe className="w-3.5 h-3.5 text-emerald-700" />
-                  Presencial en Caracas, Maracay y Lecherías
+                  Caracas, Maracay y Lecherías
                 </span>
                 <span className="text-emerald-800 font-bold">100% Confirmado</span>
               </div>
             </div>
           ))}
-        </div>
-
-        {/* Sponsor Banner */}
-        <div className="mt-12 p-6 rounded-2xl bg-slate-50 border border-slate-200 flex flex-col sm:flex-row items-center justify-between gap-6 text-center sm:text-left">
-          <div>
-            <p className="text-xs uppercase font-bold tracking-wider text-emerald-800 mb-1">Tecnología y Respaldo</p>
-            <p className="font-['Outfit',sans-serif] font-bold text-slate-900 text-lg">
-              Patrocinado por Mindray Animal Medical & Mindvet Academy
-            </p>
-          </div>
-          <div className="bg-white py-3 px-6 rounded-xl border border-slate-200 shadow-sm flex items-center justify-center">
-            <a
-              href="https://postimg.cc/tnQB2Hzx"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center hover:opacity-90 transition-opacity"
-              title="Mindray Animal Medical"
-            >
-              <img
-                src="https://i.postimg.cc/tnQB2Hzx/logo-dark3.png"
-                alt="Mindray Animal Medical"
-                className="h-9 sm:h-11 w-auto object-contain"
-                loading="lazy"
-              />
-            </a>
-          </div>
         </div>
 
       </div>

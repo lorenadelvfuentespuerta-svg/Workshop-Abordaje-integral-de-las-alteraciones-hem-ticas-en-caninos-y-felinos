@@ -80,7 +80,7 @@ export const AgendaSection: React.FC = () => {
                 : 'bg-white text-slate-600 border border-slate-200 hover:bg-slate-100'
             }`}
           >
-            ⚙️ Práctica con Mindray
+            ⚙️ Demostración y Procesamiento en Equipos
           </button>
         </div>
 
@@ -144,7 +144,7 @@ export const AgendaSection: React.FC = () => {
                     </div>
                     <span className="inline-flex items-center gap-1 text-xs font-bold bg-emerald-900/80 text-emerald-200 px-2.5 py-1 rounded-full border border-emerald-700">
                       <Microscope className="w-3 h-3" />
-                      Práctica Hands-On
+                      Práctica Presencial con Equipos
                     </span>
                   </div>
 

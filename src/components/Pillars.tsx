@@ -41,8 +41,8 @@ export const Pillars: React.FC = () => {
     {
       icon: <Cpu className="w-6 h-6 text-slate-800" />,
       bg: 'bg-slate-100 border-slate-300',
-      title: 'Práctica con Equipos Mindray',
-      desc: 'Aplicación en vivo sobre analizadores automatizados Mindray Animal Medical. Interpretación experta de alarmas e histogramas.',
+      title: 'Manejo Práctico de Instrumentación del Laboratorio',
+      desc: 'Demostración y procesamiento de muestras en analizadores automatizados. Correlación práctica e interpretación experta de alarmas, gráficos e histogramas.',
       tag: 'Sesión Práctica',
     },
   ];
